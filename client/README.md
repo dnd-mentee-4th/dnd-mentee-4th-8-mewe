@@ -1,4 +1,4 @@
-#  8조 - WEME iOS
+#  8조 - MEWE iOS
 
 | Parts     | Name   |
 |-----------|--------|
