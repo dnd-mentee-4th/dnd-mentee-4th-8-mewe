@@ -1,0 +1,41 @@
+{
+  "name": "mewe-backend",
+  "version": "0.0.1",
+  "description": "dnd-4th-8-mewe",
+  "main": "server.js",
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "rebuild": "rm -rf ./dist && rm -rf coverage && npm run build",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "clean": "rm -rf ./node_modules && rm -rf ./package-lock.json && rm -rf ./dist && rm -rf ./coverage",
+    "test": "jest --testTimeout=1000",
+    "lint": "eslint ./src --config=.eslintrc.json --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnd-mentee-4th/dnd-mentee-4th-8-mewe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnd-mentee-4th/dnd-mentee-4th-8-mewe/issues"
+  },
+  "homepage": "https://github.com/dnd-mentee-4th/dnd-mentee-4th-8-mewe#readme",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "express": "^4.17.1",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/pino": "^6.3.5",
+    "@types/supertest": "^2.0.10",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "jest": "^26.6.3",
+    "pino": "^6.11.0",
+    "pino-pretty": "^4.3.0"
+  }
+}
