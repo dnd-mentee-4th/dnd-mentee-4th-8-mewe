@@ -1,4 +1,4 @@
-#  8조 - WEME
+#  8조 - MEWE
 
 | Parts     | Name   |
 |-----------|--------|
@@ -17,6 +17,10 @@
 ## directories
 * frontend
 * backend
+
+## architecture
+
+<img src="https://user-images.githubusercontent.com/52783516/105282348-7b5efa00-5bf1-11eb-82de-b2f8d1de27b6.png" alt="image" style="zoom:80%;" />
 
 ## git action
 > later...
