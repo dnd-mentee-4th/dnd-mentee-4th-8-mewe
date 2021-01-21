@@ -7,34 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6AADE5AB25B6D17E00BD7820 /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE59825B6D17C00BD7820 /* MEWEApp.swift */; };
-		6AADE5AC25B6D17E00BD7820 /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE59825B6D17C00BD7820 /* MEWEApp.swift */; };
-		6AADE5AD25B6D17E00BD7820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE59925B6D17C00BD7820 /* ContentView.swift */; };
-		6AADE5AE25B6D17E00BD7820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE59925B6D17C00BD7820 /* ContentView.swift */; };
-		6AADE5AF25B6D17E00BD7820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AADE59A25B6D17E00BD7820 /* Assets.xcassets */; };
-		6AADE5B025B6D17E00BD7820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AADE59A25B6D17E00BD7820 /* Assets.xcassets */; };
+		6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CB25B943860027AEAE /* MEWEApp.swift */; };
+		6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CD25B943860027AEAE /* ContentView.swift */; };
+		6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CF25B943860027AEAE /* Assets.xcassets */; };
+		6A8DA1D325B943860027AEAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8DA1D225B943860027AEAE /* Preview Assets.xcassets */; };
+		6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1D425B943860027AEAE /* Persistence.swift */; };
+		6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */; };
+		6A8DA1E325B943870027AEAE /* MEWETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1E225B943870027AEAE /* MEWETests.swift */; };
+		6A8DA1EE25B943870027AEAE /* MEWEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6A8DA1DF25B943870027AEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A8DA1C025B943860027AEAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A8DA1C725B943860027AEAE;
+			remoteInfo = MEWE;
+		};
+		6A8DA1EA25B943870027AEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A8DA1C025B943860027AEAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A8DA1C725B943860027AEAE;
+			remoteInfo = MEWE;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		6AADE59825B6D17C00BD7820 /* MEWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEApp.swift; sourceTree = "<group>"; };
-		6AADE59925B6D17C00BD7820 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6AADE59A25B6D17E00BD7820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6AADE59F25B6D17E00BD7820 /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AADE5A225B6D17E00BD7820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AADE5A725B6D17E00BD7820 /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AADE5A925B6D17E00BD7820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AADE5AA25B6D17E00BD7820 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		6A8DA1C825B943860027AEAE /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8DA1CB25B943860027AEAE /* MEWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEApp.swift; sourceTree = "<group>"; };
+		6A8DA1CD25B943860027AEAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6A8DA1CF25B943860027AEAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A8DA1D225B943860027AEAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6A8DA1D425B943860027AEAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		6A8DA1D725B943860027AEAE /* MEWE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MEWE.xcdatamodel; sourceTree = "<group>"; };
+		6A8DA1D925B943860027AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8DA1DE25B943870027AEAE /* MEWETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MEWETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8DA1E225B943870027AEAE /* MEWETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWETests.swift; sourceTree = "<group>"; };
+		6A8DA1E425B943870027AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8DA1E925B943870027AEAE /* MEWEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MEWEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEUITests.swift; sourceTree = "<group>"; };
+		6A8DA1EF25B943870027AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6AADE59C25B6D17E00BD7820 /* Frameworks */ = {
+		6A8DA1C525B943860027AEAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AADE5A425B6D17E00BD7820 /* Frameworks */ = {
+		6A8DA1DB25B943870027AEAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A8DA1E625B943870027AEAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,107 +76,145 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6AADE59225B6D17C00BD7820 = {
+		6A8DA1BF25B943860027AEAE = {
 			isa = PBXGroup;
 			children = (
-				6AADE59725B6D17C00BD7820 /* Shared */,
-				6AADE5A125B6D17E00BD7820 /* iOS */,
-				6AADE5A825B6D17E00BD7820 /* macOS */,
-				6AADE5A025B6D17E00BD7820 /* Products */,
+				6A8DA1CA25B943860027AEAE /* MEWE */,
+				6A8DA1E125B943870027AEAE /* MEWETests */,
+				6A8DA1EC25B943870027AEAE /* MEWEUITests */,
+				6A8DA1C925B943860027AEAE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6AADE59725B6D17C00BD7820 /* Shared */ = {
+		6A8DA1C925B943860027AEAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AADE59825B6D17C00BD7820 /* MEWEApp.swift */,
-				6AADE59925B6D17C00BD7820 /* ContentView.swift */,
-				6AADE59A25B6D17E00BD7820 /* Assets.xcassets */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		6AADE5A025B6D17E00BD7820 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6AADE59F25B6D17E00BD7820 /* MEWE.app */,
-				6AADE5A725B6D17E00BD7820 /* MEWE.app */,
+				6A8DA1C825B943860027AEAE /* MEWE.app */,
+				6A8DA1DE25B943870027AEAE /* MEWETests.xctest */,
+				6A8DA1E925B943870027AEAE /* MEWEUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6AADE5A125B6D17E00BD7820 /* iOS */ = {
+		6A8DA1CA25B943860027AEAE /* MEWE */ = {
 			isa = PBXGroup;
 			children = (
-				6AADE5A225B6D17E00BD7820 /* Info.plist */,
+				6A8DA1CB25B943860027AEAE /* MEWEApp.swift */,
+				6A8DA1CD25B943860027AEAE /* ContentView.swift */,
+				6A8DA1CF25B943860027AEAE /* Assets.xcassets */,
+				6A8DA1D425B943860027AEAE /* Persistence.swift */,
+				6A8DA1D925B943860027AEAE /* Info.plist */,
+				6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */,
+				6A8DA1D125B943860027AEAE /* Preview Content */,
 			);
-			path = iOS;
+			path = MEWE;
 			sourceTree = "<group>";
 		};
-		6AADE5A825B6D17E00BD7820 /* macOS */ = {
+		6A8DA1D125B943860027AEAE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				6AADE5A925B6D17E00BD7820 /* Info.plist */,
-				6AADE5AA25B6D17E00BD7820 /* macOS.entitlements */,
+				6A8DA1D225B943860027AEAE /* Preview Assets.xcassets */,
 			);
-			path = macOS;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6A8DA1E125B943870027AEAE /* MEWETests */ = {
+			isa = PBXGroup;
+			children = (
+				6A8DA1E225B943870027AEAE /* MEWETests.swift */,
+				6A8DA1E425B943870027AEAE /* Info.plist */,
+			);
+			path = MEWETests;
+			sourceTree = "<group>";
+		};
+		6A8DA1EC25B943870027AEAE /* MEWEUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */,
+				6A8DA1EF25B943870027AEAE /* Info.plist */,
+			);
+			path = MEWEUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AADE59E25B6D17E00BD7820 /* MEWE (iOS) */ = {
+		6A8DA1C725B943860027AEAE /* MEWE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AADE5B325B6D17E00BD7820 /* Build configuration list for PBXNativeTarget "MEWE (iOS)" */;
+			buildConfigurationList = 6A8DA1F225B943870027AEAE /* Build configuration list for PBXNativeTarget "MEWE" */;
 			buildPhases = (
-				6AADE59B25B6D17E00BD7820 /* Sources */,
-				6AADE59C25B6D17E00BD7820 /* Frameworks */,
-				6AADE59D25B6D17E00BD7820 /* Resources */,
+				6A8DA1C425B943860027AEAE /* Sources */,
+				6A8DA1C525B943860027AEAE /* Frameworks */,
+				6A8DA1C625B943860027AEAE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "MEWE (iOS)";
-			productName = "MEWE (iOS)";
-			productReference = 6AADE59F25B6D17E00BD7820 /* MEWE.app */;
+			name = MEWE;
+			productName = MEWE;
+			productReference = 6A8DA1C825B943860027AEAE /* MEWE.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6AADE5A625B6D17E00BD7820 /* MEWE (macOS) */ = {
+		6A8DA1DD25B943870027AEAE /* MEWETests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AADE5B625B6D17E00BD7820 /* Build configuration list for PBXNativeTarget "MEWE (macOS)" */;
+			buildConfigurationList = 6A8DA1F525B943870027AEAE /* Build configuration list for PBXNativeTarget "MEWETests" */;
 			buildPhases = (
-				6AADE5A325B6D17E00BD7820 /* Sources */,
-				6AADE5A425B6D17E00BD7820 /* Frameworks */,
-				6AADE5A525B6D17E00BD7820 /* Resources */,
+				6A8DA1DA25B943870027AEAE /* Sources */,
+				6A8DA1DB25B943870027AEAE /* Frameworks */,
+				6A8DA1DC25B943870027AEAE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6A8DA1E025B943870027AEAE /* PBXTargetDependency */,
 			);
-			name = "MEWE (macOS)";
-			productName = "MEWE (macOS)";
-			productReference = 6AADE5A725B6D17E00BD7820 /* MEWE.app */;
-			productType = "com.apple.product-type.application";
+			name = MEWETests;
+			productName = MEWETests;
+			productReference = 6A8DA1DE25B943870027AEAE /* MEWETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6A8DA1E825B943870027AEAE /* MEWEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A8DA1F825B943870027AEAE /* Build configuration list for PBXNativeTarget "MEWEUITests" */;
+			buildPhases = (
+				6A8DA1E525B943870027AEAE /* Sources */,
+				6A8DA1E625B943870027AEAE /* Frameworks */,
+				6A8DA1E725B943870027AEAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A8DA1EB25B943870027AEAE /* PBXTargetDependency */,
+			);
+			name = MEWEUITests;
+			productName = MEWEUITests;
+			productReference = 6A8DA1E925B943870027AEAE /* MEWEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6AADE59325B6D17C00BD7820 /* Project object */ = {
+		6A8DA1C025B943860027AEAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					6AADE59E25B6D17E00BD7820 = {
+					6A8DA1C725B943860027AEAE = {
 						CreatedOnToolsVersion = 12.2;
 					};
-					6AADE5A625B6D17E00BD7820 = {
+					6A8DA1DD25B943870027AEAE = {
 						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 6A8DA1C725B943860027AEAE;
+					};
+					6A8DA1E825B943870027AEAE = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 6A8DA1C725B943860027AEAE;
 					};
 				};
 			};
-			buildConfigurationList = 6AADE59625B6D17C00BD7820 /* Build configuration list for PBXProject "MEWE" */;
+			buildConfigurationList = 6A8DA1C325B943860027AEAE /* Build configuration list for PBXProject "MEWE" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -152,59 +222,89 @@
 				en,
 				Base,
 			);
-			mainGroup = 6AADE59225B6D17C00BD7820;
-			productRefGroup = 6AADE5A025B6D17E00BD7820 /* Products */;
+			mainGroup = 6A8DA1BF25B943860027AEAE;
+			productRefGroup = 6A8DA1C925B943860027AEAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AADE59E25B6D17E00BD7820 /* MEWE (iOS) */,
-				6AADE5A625B6D17E00BD7820 /* MEWE (macOS) */,
+				6A8DA1C725B943860027AEAE /* MEWE */,
+				6A8DA1DD25B943870027AEAE /* MEWETests */,
+				6A8DA1E825B943870027AEAE /* MEWEUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6AADE59D25B6D17E00BD7820 /* Resources */ = {
+		6A8DA1C625B943860027AEAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AADE5AF25B6D17E00BD7820 /* Assets.xcassets in Resources */,
+				6A8DA1D325B943860027AEAE /* Preview Assets.xcassets in Resources */,
+				6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AADE5A525B6D17E00BD7820 /* Resources */ = {
+		6A8DA1DC25B943870027AEAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AADE5B025B6D17E00BD7820 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A8DA1E725B943870027AEAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6AADE59B25B6D17E00BD7820 /* Sources */ = {
+		6A8DA1C425B943860027AEAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AADE5AD25B6D17E00BD7820 /* ContentView.swift in Sources */,
-				6AADE5AB25B6D17E00BD7820 /* MEWEApp.swift in Sources */,
+				6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */,
+				6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */,
+				6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */,
+				6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AADE5A325B6D17E00BD7820 /* Sources */ = {
+		6A8DA1DA25B943870027AEAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AADE5AE25B6D17E00BD7820 /* ContentView.swift in Sources */,
-				6AADE5AC25B6D17E00BD7820 /* MEWEApp.swift in Sources */,
+				6A8DA1E325B943870027AEAE /* MEWETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A8DA1E525B943870027AEAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A8DA1EE25B943870027AEAE /* MEWEUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6A8DA1E025B943870027AEAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A8DA1C725B943860027AEAE /* MEWE */;
+			targetProxy = 6A8DA1DF25B943870027AEAE /* PBXContainerItemProxy */;
+		};
+		6A8DA1EB25B943870027AEAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A8DA1C725B943860027AEAE /* MEWE */;
+			targetProxy = 6A8DA1EA25B943870027AEAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		6AADE5B125B6D17E00BD7820 /* Debug */ = {
+		6A8DA1F025B943870027AEAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -255,15 +355,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		6AADE5B225B6D17E00BD7820 /* Release */ = {
+		6A8DA1F125B943870027AEAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,137 +410,191 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-			};
-			name = Release;
-		};
-		6AADE5B425B6D17E00BD7820 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93A6S4WHC4;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWE;
-				PRODUCT_NAME = MEWE;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6AADE5B525B6D17E00BD7820 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93A6S4WHC4;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWE;
-				PRODUCT_NAME = MEWE;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		6AADE5B725B6D17E00BD7820 /* Debug */ = {
+		6A8DA1F325B943870027AEAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 93A6S4WHC4;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"MEWE/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_FILE = MEWE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWE;
-				PRODUCT_NAME = MEWE;
-				SDKROOT = macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6AADE5B825B6D17E00BD7820 /* Release */ = {
+		6A8DA1F425B943870027AEAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 93A6S4WHC4;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"MEWE/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_FILE = MEWE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWE;
-				PRODUCT_NAME = MEWE;
-				SDKROOT = macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A8DA1F625B943870027AEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MEWETests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MEWE.app/MEWE";
+			};
+			name = Debug;
+		};
+		6A8DA1F725B943870027AEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MEWETests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MEWE.app/MEWE";
+			};
+			name = Release;
+		};
+		6A8DA1F925B943870027AEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MEWEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MEWE;
+			};
+			name = Debug;
+		};
+		6A8DA1FA25B943870027AEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MEWEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lena.MEWEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MEWE;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AADE59625B6D17C00BD7820 /* Build configuration list for PBXProject "MEWE" */ = {
+		6A8DA1C325B943860027AEAE /* Build configuration list for PBXProject "MEWE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AADE5B125B6D17E00BD7820 /* Debug */,
-				6AADE5B225B6D17E00BD7820 /* Release */,
+				6A8DA1F025B943870027AEAE /* Debug */,
+				6A8DA1F125B943870027AEAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AADE5B325B6D17E00BD7820 /* Build configuration list for PBXNativeTarget "MEWE (iOS)" */ = {
+		6A8DA1F225B943870027AEAE /* Build configuration list for PBXNativeTarget "MEWE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AADE5B425B6D17E00BD7820 /* Debug */,
-				6AADE5B525B6D17E00BD7820 /* Release */,
+				6A8DA1F325B943870027AEAE /* Debug */,
+				6A8DA1F425B943870027AEAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AADE5B625B6D17E00BD7820 /* Build configuration list for PBXNativeTarget "MEWE (macOS)" */ = {
+		6A8DA1F525B943870027AEAE /* Build configuration list for PBXNativeTarget "MEWETests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AADE5B725B6D17E00BD7820 /* Debug */,
-				6AADE5B825B6D17E00BD7820 /* Release */,
+				6A8DA1F625B943870027AEAE /* Debug */,
+				6A8DA1F725B943870027AEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A8DA1F825B943870027AEAE /* Build configuration list for PBXNativeTarget "MEWEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A8DA1F925B943870027AEAE /* Debug */,
+				6A8DA1FA25B943870027AEAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6A8DA1D725B943860027AEAE /* MEWE.xcdatamodel */,
+			);
+			currentVersion = 6A8DA1D725B943860027AEAE /* MEWE.xcdatamodel */;
+			path = MEWE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 6AADE59325B6D17C00BD7820 /* Project object */;
+	rootObject = 6A8DA1C025B943860027AEAE /* Project object */;
 }
