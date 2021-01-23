@@ -269,3 +269,6 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+user_data/
+mewe_data/
