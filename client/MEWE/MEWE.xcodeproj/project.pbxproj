@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8DDB4625BC03830093580B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4525BC03830093580B /* MainView.swift */; };
+		5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */; };
+		5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */; };
+		5C8DDB5C25BC11980093580B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB5B25BC11980093580B /* CircleView.swift */; };
+		5C8DDB7225BC16610093580B /* emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB7125BC16610093580B /* emoji.swift */; };
+		5C8DDB7D25BC20660093580B /* TodayEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB7C25BC20660093580B /* TodayEmoji.swift */; };
+		5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB8225BC20E00093580B /* CategoryView.swift */; };
+		5C93B31525C014300067A723 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31425C014300067A723 /* CalendarView.swift */; };
+		5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31925C0143A0067A723 /* UserProfileView.swift */; };
+		5C93B31F25C014420067A723 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31E25C014420067A723 /* FriendView.swift */; };
 		6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CB25B943860027AEAE /* MEWEApp.swift */; };
 		6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CD25B943860027AEAE /* ContentView.swift */; };
 		6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CF25B943860027AEAE /* Assets.xcassets */; };
@@ -35,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C8DDB4525BC03830093580B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiView.swift; sourceTree = "<group>"; };
+		5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmoji.swift; sourceTree = "<group>"; };
+		5C8DDB5B25BC11980093580B /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		5C8DDB7125BC16610093580B /* emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emoji.swift; sourceTree = "<group>"; };
+		5C8DDB7C25BC20660093580B /* TodayEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayEmoji.swift; sourceTree = "<group>"; };
+		5C8DDB8225BC20E00093580B /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		5C93B31425C014300067A723 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		5C93B31925C0143A0067A723 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		5C93B31E25C014420067A723 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		6A8DA1C825B943860027AEAE /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8DA1CB25B943860027AEAE /* MEWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEApp.swift; sourceTree = "<group>"; };
 		6A8DA1CD25B943860027AEAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +96,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C8DDB4A25BC03FA0093580B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				5C8DDB4525BC03830093580B /* MainView.swift */,
+				5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */,
+				5C8DDB5B25BC11980093580B /* CircleView.swift */,
+				5C8DDB7C25BC20660093580B /* TodayEmoji.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		5C8DDB6D25BC16380093580B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C8DDB7125BC16610093580B /* emoji.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C8DDB8125BC20C20093580B /* CategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				5C8DDB8225BC20E00093580B /* CategoryView.swift */,
+			);
+			path = CategoryView;
+			sourceTree = "<group>";
+		};
+		5C93B30B25C012B10067A723 /* RecordEmojiView */ = {
+			isa = PBXGroup;
+			children = (
+				5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */,
+			);
+			path = RecordEmojiView;
+			sourceTree = "<group>";
+		};
+		5C93B30C25C0133C0067A723 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B31425C014300067A723 /* CalendarView.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		5C93B30D25C0139D0067A723 /* UserProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B31925C0143A0067A723 /* UserProfileView.swift */,
+			);
+			path = UserProfileView;
+			sourceTree = "<group>";
+		};
+		5C93B30E25C013CC0067A723 /* FriendView */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B31E25C014420067A723 /* FriendView.swift */,
+			);
+			path = FriendView;
+			sourceTree = "<group>";
+		};
 		6A8DA1BF25B943860027AEAE = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +178,19 @@
 		6A8DA1CA25B943860027AEAE /* MEWE */ = {
 			isa = PBXGroup;
 			children = (
+				6A8DA1D925B943860027AEAE /* Info.plist */,
 				6A8DA1CB25B943860027AEAE /* MEWEApp.swift */,
 				6A8DA1CD25B943860027AEAE /* ContentView.swift */,
 				6A8DA1CF25B943860027AEAE /* Assets.xcassets */,
 				6A8DA1D425B943860027AEAE /* Persistence.swift */,
-				6A8DA1D925B943860027AEAE /* Info.plist */,
 				6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */,
+				5C8DDB6D25BC16380093580B /* Model */,
+				5C93B30E25C013CC0067A723 /* FriendView */,
+				5C93B30D25C0139D0067A723 /* UserProfileView */,
+				5C93B30C25C0133C0067A723 /* CalendarView */,
+				5C93B30B25C012B10067A723 /* RecordEmojiView */,
+				5C8DDB8125BC20C20093580B /* CategoryView */,
+				5C8DDB4A25BC03FA0093580B /* MainView */,
 				6A8DA1D125B943860027AEAE /* Preview Content */,
 			);
 			path = MEWE;
@@ -265,9 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8DDB5C25BC11980093580B /* CircleView.swift in Sources */,
+				5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */,
+				5C8DDB7D25BC20660093580B /* TodayEmoji.swift in Sources */,
 				6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */,
+				5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */,
+				5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */,
+				5C93B31525C014300067A723 /* CalendarView.swift in Sources */,
+				5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */,
 				6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */,
+				5C8DDB7225BC16610093580B /* emoji.swift in Sources */,
 				6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */,
+				5C8DDB4625BC03830093580B /* MainView.swift in Sources */,
+				5C93B31F25C014420067A723 /* FriendView.swift in Sources */,
 				6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
