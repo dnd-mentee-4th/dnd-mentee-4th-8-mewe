@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  TodayView.swift
 //  MEWE
 //
 //  Created by 1v1 on 2021/01/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct TodayView: View {
     @State var showPopover = false
     @State var isRecordingOn = false
     var body: some View {
@@ -40,7 +40,7 @@ struct MainView: View {
                     
                 }
                 .padding()
-                TodayEmoji()
+                TodayEmojiView()
                     .padding()
                 Spacer(minLength: 0)
                 
@@ -58,7 +58,7 @@ struct MainView: View {
                         .foregroundColor(Color.white)
                 })
                 if self.isRecordingOn{
-                    RecordEmojiView()
+                    SelectEmoji()
                 }
             }
             
@@ -69,11 +69,8 @@ struct MainView: View {
     
 }
 
-
-
-
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        TodayView()
     }
 }
