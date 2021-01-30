@@ -9,13 +9,17 @@ CREATE TABLE user (
 );
 
 CREATE TABLE user_block (
+  `idx` INTEGER NOT NULL,
   `email` VARCHAR(40) NOT NULL,
-  `banEmail` VARCHAR(40) NOT NULL
+  `banEmail` VARCHAR(40) NOT NULL,
+  PRIMARY KEY (idx)
 );
 
 CREATE TABLE user_friend (
+  `idx` INTEGER NOT NULL,
   `email` VARCHAR(40) NOT NULL,
-  `friendEmail` VARCHAR(40) NOT NULL
+  `friendEmail` VARCHAR(40) NOT NULL,
+  PRIMARY KEY (idx)
 );
 
 INSERT INTO user(`email`, `nickname`, `block`) VALUES('mewe@mewe.com', 'mewe', 0);
