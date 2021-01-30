@@ -13,6 +13,8 @@ struct SelectEmoji: View {
             HStack(spacing: 10){
                 ForEach(0..<10)  { index in
                     CircleView()
+                        .shadow(radius: 5)
+                        .foregroundColor(Color.white)
                 }
             }.padding()
         }.frame(height:100)

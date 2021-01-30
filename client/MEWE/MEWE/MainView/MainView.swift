@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State var showPopover = false
-
+    @State var isRecordingOn = false
     var body: some View {
         NavigationView{
             VStack{
@@ -20,6 +20,7 @@ struct MainView: View {
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
                     }
+                    
                     Spacer(minLength: 0)
                     
                     Button(action:{
@@ -31,34 +32,43 @@ struct MainView: View {
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
                     }
+                    
                     if self.showPopover{
                         PopoverView()
                     }
-                        
-                   
+                    
+                    
                 }
                 .padding()
                 TodayEmoji()
                     .padding()
                 Spacer(minLength: 0)
+                
+                
+                
                 Button(action: {
-                    /// RecordEmojiView 로 확장됨
+                    withAnimation(.spring()){
+                        self.isRecordingOn.toggle()
+                    }
+                    
                 }, label: {
                     Circle()
                         .frame(width: 55, height: 55)
                         .shadow(radius: 5)
                         .foregroundColor(Color.white)
                 })
-                
-                
-                
-                
+                if self.isRecordingOn{
+                    RecordEmojiView()
+                }
             }
-            .navigationBarHidden(true)
-        }
-        
+            
+            
+        } .navigationBarHidden(true)
     }
+    
+    
 }
+
 
 
 
