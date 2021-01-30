@@ -10,7 +10,7 @@ import SwiftUI
 struct RecordEmojiView: View {
     @State private var text:String = ""
     @State private var  selectedTitles = Set<String>()
-    @State private var newEmoji = emoji(feeling: [], feelingText: "")
+    @State private var newEmoji = Emoji(feeling: [], feelingText: "")
     var body:some View {
         VStack{
             SelectEmoji()

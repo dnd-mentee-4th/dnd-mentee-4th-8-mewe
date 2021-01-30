@@ -1,5 +1,5 @@
 //
-//  emoji.swift
+//  Emoji.swift
 //  MEWE
 //
 //  Created by 1v1 on 2021/01/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class emoji: Identifiable, ObservableObject{
+class Emoji: Identifiable, ObservableObject{
     let id: UUID
     @Published var feeling: [Image]
     @Published var feelingText: String
