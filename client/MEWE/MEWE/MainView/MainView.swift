@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var tag:Int? = nil
+    @State var showPopover = false
 
     var body: some View {
         NavigationView{
@@ -21,11 +21,21 @@ struct MainView: View {
                             .foregroundColor(.black)
                     }
                     Spacer(minLength: 0)
-                    Button(action:{}){
-                        Image(systemName: "note.text")
+                    
+                    Button(action:{
+                        withAnimation(.spring()){
+                            self.showPopover.toggle()
+                        }
+                    }){
+                        Image(systemName: self.showPopover ? "xmark.circle" : "note.text")
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
                     }
+                    if self.showPopover{
+                        PopoverView()
+                    }
+                        
+                   
                 }
                 .padding()
                 TodayEmoji()
