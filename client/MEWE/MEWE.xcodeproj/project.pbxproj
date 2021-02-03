@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,13 @@
 		5C93B31525C014300067A723 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31425C014300067A723 /* CalendarView.swift */; };
 		5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31925C0143A0067A723 /* UserProfileView.swift */; };
 		5C93B31F25C014420067A723 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31E25C014420067A723 /* FriendView.swift */; };
+		6A2756F625CABFD900D8A573 /* MonthlyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2756F525CABFD900D8A573 /* MonthlyChartView.swift */; };
+		6A27570525CAC1C000D8A573 /* SystemImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27570425CAC1C000D8A573 /* SystemImageName.swift */; };
+		6A27571725CAE47500D8A573 /* MonthlyChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */; };
+		6A27572525CAFB2300D8A573 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6A27572425CAFB2300D8A573 /* SwiftUICharts */; };
+		6A27573525CB035C00D8A573 /* MonthlyChartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27573425CB035C00D8A573 /* MonthlyChartViewModelTests.swift */; };
+		6A27573925CB048700D8A573 /* MonthlyChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */; };
+		6A27573E25CB0A6C00D8A573 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27573D25CB0A6C00D8A573 /* NoticeView.swift */; };
 		6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CB25B943860027AEAE /* MEWEApp.swift */; };
 		6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CD25B943860027AEAE /* ContentView.swift */; };
 		6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CF25B943860027AEAE /* Assets.xcassets */; };
@@ -55,6 +62,11 @@
 		5C93B31425C014300067A723 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5C93B31925C0143A0067A723 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		5C93B31E25C014420067A723 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
+		6A2756F525CABFD900D8A573 /* MonthlyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartView.swift; sourceTree = "<group>"; };
+		6A27570425CAC1C000D8A573 /* SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageName.swift; sourceTree = "<group>"; };
+		6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartViewModel.swift; sourceTree = "<group>"; };
+		6A27573425CB035C00D8A573 /* MonthlyChartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartViewModelTests.swift; sourceTree = "<group>"; };
+		6A27573D25CB0A6C00D8A573 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		6A8DA1C825B943860027AEAE /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8DA1CB25B943860027AEAE /* MEWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEApp.swift; sourceTree = "<group>"; };
 		6A8DA1CD25B943860027AEAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A27572525CAFB2300D8A573 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +168,48 @@
 			path = FriendView;
 			sourceTree = "<group>";
 		};
+		6A2756F325CABFB000D8A573 /* MonthlyChart */ = {
+			isa = PBXGroup;
+			children = (
+				6A27570C25CAE3C500D8A573 /* Model */,
+				6A27570D25CAE3D500D8A573 /* ViewModel */,
+				6A2756F425CABFCC00D8A573 /* View */,
+			);
+			path = MonthlyChart;
+			sourceTree = "<group>";
+		};
+		6A2756F425CABFCC00D8A573 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A2756F525CABFD900D8A573 /* MonthlyChartView.swift */,
+				6A27573D25CB0A6C00D8A573 /* NoticeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A27570325CAC1A700D8A573 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6A27570425CAC1C000D8A573 /* SystemImageName.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		6A27570C25CAE3C500D8A573 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A27570D25CAE3D500D8A573 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6A8DA1BF25B943860027AEAE = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +239,7 @@
 				6A8DA1CF25B943860027AEAE /* Assets.xcassets */,
 				6A8DA1D425B943860027AEAE /* Persistence.swift */,
 				6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */,
+				6A27570325CAC1A700D8A573 /* Utility */,
 				5C8DDB6D25BC16380093580B /* Model */,
 				5C93B30E25C013CC0067A723 /* FriendView */,
 				5C93B30D25C0139D0067A723 /* UserProfileView */,
@@ -191,6 +247,7 @@
 				5C93B30B25C012B10067A723 /* RecordEmojiView */,
 				5C8DDB8125BC20C20093580B /* CategoryView */,
 				5C8DDB4A25BC03FA0093580B /* MainView */,
+				6A2756F325CABFB000D8A573 /* MonthlyChart */,
 				6A8DA1D125B943860027AEAE /* Preview Content */,
 			);
 			path = MEWE;
@@ -208,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				6A8DA1E225B943870027AEAE /* MEWETests.swift */,
+				6A27573425CB035C00D8A573 /* MonthlyChartViewModelTests.swift */,
 				6A8DA1E425B943870027AEAE /* Info.plist */,
 			);
 			path = MEWETests;
@@ -238,6 +296,9 @@
 			dependencies = (
 			);
 			name = MEWE;
+			packageProductDependencies = (
+				6A27572425CAFB2300D8A573 /* SwiftUICharts */,
+			);
 			productName = MEWE;
 			productReference = 6A8DA1C825B943860027AEAE /* MEWE.app */;
 			productType = "com.apple.product-type.application";
@@ -309,6 +370,9 @@
 				Base,
 			);
 			mainGroup = 6A8DA1BF25B943860027AEAE;
+			packageReferences = (
+				6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 6A8DA1C925B943860027AEAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,8 +424,12 @@
 				5C93B31525C014300067A723 /* CalendarView.swift in Sources */,
 				5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */,
 				6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */,
+				6A27570525CAC1C000D8A573 /* SystemImageName.swift in Sources */,
 				5C8DDB7225BC16610093580B /* emoji.swift in Sources */,
 				6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */,
+				6A27573E25CB0A6C00D8A573 /* NoticeView.swift in Sources */,
+				6A27571725CAE47500D8A573 /* MonthlyChartViewModel.swift in Sources */,
+				6A2756F625CABFD900D8A573 /* MonthlyChartView.swift in Sources */,
 				5C8DDB4625BC03830093580B /* MainView.swift in Sources */,
 				5C93B31F25C014420067A723 /* FriendView.swift in Sources */,
 				6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */,
@@ -372,6 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A27573525CB035C00D8A573 /* MonthlyChartViewModelTests.swift in Sources */,
+				6A27573925CB048700D8A573 /* MonthlyChartViewModel.swift in Sources */,
 				6A8DA1E325B943870027AEAE /* MEWETests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,6 +748,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A27572425CAFB2300D8A573 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */ = {
