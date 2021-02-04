@@ -28,13 +28,11 @@ struct NoticeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 15)
             }
-
         }
-        .frame(width: width, height: height)
         .padding()
+        .frame(width: width, height: height)
         .background(Color.white)
         .opacity(0.8)
-        
     }
     
 }

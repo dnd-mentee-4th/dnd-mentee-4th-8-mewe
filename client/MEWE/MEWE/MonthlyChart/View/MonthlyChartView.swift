@@ -86,6 +86,7 @@ struct MonthlyChartView: View {
                         // notice view - not enough data
                         if viewModel.pieChartdata.count < 10 {
                             NoticeView(width: chartViewWidth, height: chartViewHeight)
+                                .cornerRadius(30)
                         }
                     }
                     Spacer()
