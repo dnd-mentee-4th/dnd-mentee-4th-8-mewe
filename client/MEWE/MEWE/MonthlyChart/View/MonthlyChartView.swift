@@ -11,11 +11,9 @@ import SwiftUICharts
 struct MonthlyChartView: View {
     
     @ObservedObject var viewModel = MonthlyChartViewModel()
-    private var chartViewWidth: CGFloat = UIScreen.main.bounds.width - 100
-    private var chartViewHeight: CGFloat = UIScreen.main.bounds.height / 3
     
     var body: some View {
-        GeometryReader { geo in
+        GeometryReader { geometry in
             NavigationView {
                 VStack {
                     
@@ -32,7 +30,7 @@ struct MonthlyChartView: View {
                                        weight: .bold,
                                        foregroundColor: .black)
                     }
-                    .frame(width: geo.size.width, alignment: .leading)
+                    .frame(width: geometry.size.width, alignment: .leading)
                     .padding(.leading, 50)
                     
                     Spacer()
@@ -66,8 +64,8 @@ struct MonthlyChartView: View {
                         BarChartView(data: viewModel.barChartData,
                                      title: viewModel.sceneTitle,
                                      style: barChartStyle,
-                                     form: CGSize(width: chartViewWidth,
-                                                  height: chartViewHeight))
+                                     form: CGSize(width: geometry.size.width - 100,
+                                                  height: geometry.size.height / 3))
                         
                         PieChartView(data: viewModel.pieChartdata,
                                      title: "월말 정산",
@@ -78,14 +76,14 @@ struct MonthlyChartView: View {
                                                   textColor: .black,
                                                   legendTextColor: .gray,
                                                   dropShadowColor: .black),
-                                     form: CGSize(width: chartViewWidth,
-                                                  height: chartViewHeight),
+                                     form: CGSize(width: geometry.size.width - 100,
+                                                  height: geometry.size.height / 3),
                                      dropShadow: true,
                                      valueSpecifier: " ☺️ ")
                         
                         // notice view - not enough data
                         if viewModel.pieChartdata.count < 10 {
-                            NoticeView(width: chartViewWidth, height: chartViewHeight)
+                            NoticeView(width: geometry.size.width - 100, height: geometry.size.height / 3)
                                 .cornerRadius(30)
                         }
                     }
