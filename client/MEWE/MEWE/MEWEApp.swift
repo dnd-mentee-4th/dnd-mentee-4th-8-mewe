@@ -13,7 +13,7 @@ struct MEWEApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TodayView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
