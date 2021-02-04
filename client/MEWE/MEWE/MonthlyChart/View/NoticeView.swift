@@ -17,14 +17,13 @@ struct NoticeView: View {
         ZStack {
             VStack() {
                 Text("데이터를 \n모으는 중이에요 📊")
-                    .fontWeight(.bold)
-                    .font(.system(size: 25))
+                    .setupFont(size: 25, weight: .bold)
                     .multilineTextAlignment(.center)
         
                 Text("MEWE를 한 달 이상 사용시 \n감정 월말정산을 확인할 수 있어요!")
-                    .fontWeight(.none)
-                    .font(.system(size: 17))
-                    .foregroundColor(Color.gray)
+                    .setupFont(size: 17,
+                               weight: .regular,
+                               foregroundColor: .gray)
                     .multilineTextAlignment(.center)
                     .padding(.top, 15)
             }
