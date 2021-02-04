@@ -12,38 +12,19 @@ struct CategoryView: View {
     var body: some View {
         VStack{
             List{
-                NavigationLink(
-                    destination: UserProfileView(),
-                    label: {
-                        Text("나의 정보").foregroundColor(Color.black).padding()
-                    })
-                
-                NavigationLink(
-                    destination: FriendView(),
-                    label: {
-                        Text("친구 목록").foregroundColor(Color.black).padding()
-                    })
-                NavigationLink(
-                    destination: EmptyView(),
-                    label: {
-                        Text("감정 방명록").foregroundColor(Color.black).padding()
-                    })
-                NavigationLink(
-                    destination: EmptyView(),
-                    label: {
-                        Text("월말 정산").foregroundColor(Color.black).padding()
-                    })
+                naviLink(UserProfileView(), "나의 정보")
+                naviLink(FriendView(), "친구 목록")
+                naviLink(EmptyView(), "감정 방명록")
+                naviLink(EmptyView(), "월말 정산")
                 Toggle(isOn: $isAlarmOn, label: {
                     VStack(alignment: .leading){
                         Text("알람 설정")
-                        Text("오늘 감정 기록 하셨나요? 처럼 인사를 알람으로 보내드려요")
+                        Text("오늘 감정 기록 하셨나요? 처럼 인사를 알람으로 보내드려요!")
                             .font(.caption)
                             .foregroundColor(Color.gray)
                             .padding([.top, .bottom, .trailing])
                             
                     }.padding()
-                    
-                    
                 })
             }
         }
@@ -51,6 +32,16 @@ struct CategoryView: View {
         
     }
    
+}
+
+extension CategoryView {
+    func naviLink<V: View>(_ destination: V, _  text: String) -> some View{
+        NavigationLink(
+            destination: destination,
+            label: {
+                Text(text).foregroundColor(Color.black).padding()
+            })
+    }
 }
 
 struct CategoryView_Previews: PreviewProvider {

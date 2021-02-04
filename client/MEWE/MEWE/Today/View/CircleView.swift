@@ -12,9 +12,11 @@ struct CircleView: View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 10){
                 ForEach(0..<10)  { index in
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                    Button(action: {
+                        // 작은(?) 이모지들 선택 후 메인 이모지 선택으로 넘어가ㄱ
+                    }){
                         Circle()
-                            .fill(Color.orange)
+                            .fill(Color.white)
                             .frame(width: 70, height: 70)
                     }
                     .shadow(radius: 5)
