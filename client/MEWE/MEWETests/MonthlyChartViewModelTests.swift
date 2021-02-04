@@ -15,9 +15,9 @@ class MonthlyChartViewModelTests: XCTestCase {
         // given
         let viewModel = MonthlyChartViewModel()
         // when
-        let originalData = viewModel.data
+        let originalData = viewModel.pieChartdata
         viewModel.updateChartData()
-        let shuffledData = viewModel.data
+        let shuffledData = viewModel.pieChartdata
         // then
         XCTAssertNotEqual(originalData, shuffledData, "차트에 들어갈 데이터 배열의 순서가 셔플되었습니다.")
     }

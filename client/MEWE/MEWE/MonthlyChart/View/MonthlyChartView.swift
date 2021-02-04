@@ -11,7 +11,6 @@ import SwiftUICharts
 struct MonthlyChartView: View {
     
     @ObservedObject var viewModel = MonthlyChartViewModel()
-    private let sceneTitle: String = "월말정산"
     private let chartViewWidth: CGFloat = UIScreen.main.bounds.width - 100
     private let chartViewHeight: CGFloat = UIScreen.main.bounds.height / 3
     
@@ -21,14 +20,12 @@ struct MonthlyChartView: View {
                 
                 // Navigation
                 HStack {
-                    NavigationLink(
-                        destination: CalendarView()){
+                    NavigationLink(destination: CalendarView()){
                         Image(systemName: SystemImageName.chevronLeft)
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
-                        
                     }
-                    Text(sceneTitle)
+                    Text(viewModel.sceneTitle)
                         .fontWeight(.bold)
                         .font(.system(size: 30))
                 }
@@ -61,9 +58,14 @@ struct MonthlyChartView: View {
                 
                 // Chart
                 ZStack {
-                    PieChartView(data: viewModel.data, title: "월말 정산", legend: "한 달동안 어떤 감정을 느끼셨나요?", style: .init(backgroundColor: .white, accentColor: .yellow, secondGradientColor: .green, textColor: .black, legendTextColor: .gray, dropShadowColor: .black), form: CGSize(width: chartViewWidth, height: chartViewHeight), dropShadow: true, valueSpecifier: "\(viewModel.data)")
-                        .padding()
-                    if viewModel.data.count < 10 {
+                    
+                    // 디자인에 따라 bar chart 와 pie chart 중 하나 사용할 예정입니다
+                    BarChartView(data: viewModel.barChartData, title: viewModel.sceneTitle, style: barChartStyle, form: CGSize(width: chartViewWidth, height: chartViewHeight))
+                    
+                    PieChartView(data: viewModel.pieChartdata, title: "월말 정산", legend: "한 달동안 어떤 감정을 느끼셨나요?", style: .init(backgroundColor: .white, accentColor: .yellow, secondGradientColor: .green, textColor: .black, legendTextColor: .gray, dropShadowColor: .black), form: CGSize(width: chartViewWidth, height: chartViewHeight), dropShadow: true, valueSpecifier: " ☺️ ")
+                    
+                    // notice view - not enough data
+                    if viewModel.pieChartdata.count < 10 {
                         NoticeView(width: chartViewWidth, height: chartViewHeight)
                     }
                 }
@@ -73,5 +75,11 @@ struct MonthlyChartView: View {
             }
             .navigationBarHidden(true)
         }
+    }
+}
+
+extension MonthlyChartView {
+    private var barChartStyle: ChartStyle {
+        ChartStyle(backgroundColor: Color.white, accentColor: Colors.OrangeStart, secondGradientColor: Colors.OrangeEnd, textColor: Color.black, legendTextColor: Color.black, dropShadowColor: .gray )
     }
 }
