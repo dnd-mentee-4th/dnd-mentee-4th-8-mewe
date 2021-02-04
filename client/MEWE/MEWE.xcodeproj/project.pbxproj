@@ -17,7 +17,6 @@
 		5C93B31525C014300067A723 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31425C014300067A723 /* CalendarView.swift */; };
 		5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31925C0143A0067A723 /* UserProfileView.swift */; };
 		5C93B31F25C014420067A723 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B31E25C014420067A723 /* FriendView.swift */; };
-		5CAEBBD825C552E400D5A6B0 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEBBD725C552E400D5A6B0 /* PopoverView.swift */; };
 		6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CB25B943860027AEAE /* MEWEApp.swift */; };
 		6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CD25B943860027AEAE /* ContentView.swift */; };
 		6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CF25B943860027AEAE /* Assets.xcassets */; };
@@ -56,7 +55,6 @@
 		5C93B31425C014300067A723 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5C93B31925C0143A0067A723 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		5C93B31E25C014420067A723 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
-		5CAEBBD725C552E400D5A6B0 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		6A8DA1C825B943860027AEAE /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8DA1CB25B943860027AEAE /* MEWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEApp.swift; sourceTree = "<group>"; };
 		6A8DA1CD25B943860027AEAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		5CAEBBEF25C57D3E00D5A6B0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5CAEBBD725C552E400D5A6B0 /* PopoverView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -461,7 +458,6 @@
 				5C8DDB5C25BC11980093580B /* CircleView.swift in Sources */,
 				5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */,
 				5C8DDB7D25BC20660093580B /* TodayEmojiView.swift in Sources */,
-				5CAEBBD825C552E400D5A6B0 /* PopoverView.swift in Sources */,
 				6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */,
 				5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */,
 				5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */,

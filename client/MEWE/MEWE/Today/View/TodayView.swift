@@ -23,20 +23,6 @@ struct TodayView: View {
                     
                     Spacer(minLength: 0)
                     
-                    Button(action:{
-                        withAnimation(.spring()){
-                            self.showPopover.toggle()
-                        }
-                    }){
-                        Image(systemName: self.showPopover ? "xmark.circle" : "note.text")
-                            .font(.system(size: 25, weight:.heavy))
-                            .foregroundColor(.black)
-                    }
-                    
-                    if self.showPopover{
-                        PopoverView()
-                    }
-                    
                     
                 }
                 .padding()
