@@ -17,7 +17,7 @@ struct MonthlyChartView: View {
             NavigationView {
                 VStack {
                     
-                    // Navigation
+                    // MARK: - Navigation
                     HStack {
                         NavigationLink(destination: CalendarView()){
                             Image(systemName: SystemImageName.chevronLeft)
@@ -35,7 +35,7 @@ struct MonthlyChartView: View {
                     
                     Spacer()
                     
-                    // Select Month
+                    // MARK: - Select Month
                     HStack {
                         
                         Button(action: { // move to previous buttonUIScreen
@@ -56,12 +56,12 @@ struct MonthlyChartView: View {
                         })
                         
                     }
-                    
-                    // Chart
+                    VStack {
+                    // MARK: - Chart
                     ZStack {
                         
                         LineView(data: viewModel.lineChartdata, title: viewModel.sceneTitle, legend: "이번 달 감정 변화를 확인하세요 👀")
-                            .padding()
+                            .padding(10)
                         
                         // notice view - not enough data
                         if viewModel.lineChartdata.count < 10 {
@@ -70,9 +70,16 @@ struct MonthlyChartView: View {
                         }
                     }
                     
+                    // MARK: - monthly representative emoji
                     MonthlyRepresentativeEmojiView()
-                    Spacer()
-                    Spacer()
+                        .frame(width: geometry.size.width - 10, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    
+                    // MARK: - monthly analysis
+                    MonthlyAnalysisView()
+                        .frame(width: geometry.size.width, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    
+                }
+                    .frame(maxHeight: .infinity)
                 }
                 .navigationBarHidden(true)
             }
