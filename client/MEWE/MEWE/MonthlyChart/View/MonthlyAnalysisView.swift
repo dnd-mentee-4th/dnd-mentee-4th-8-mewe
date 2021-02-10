@@ -28,19 +28,25 @@ struct MonthlyAnalysisView: View {
 
 extension MonthlyAnalysisView {
     @ViewBuilder
-    func analysisCellView(_ description: String, _  percentage: String, _ isUp: Trend) -> some View {
+    private func analysisCellView(_ description: String, _  percentage: String, _ trend: Trend) -> some View {
         VStack {
             Text(description)
                 .setupFont(size: 13, weight: .light, foregroundColor: .gray)
             HStack {
                 Text(percentage)
                     .setupFont(size: 15, weight: .bold)
-                switch isUp {
-                case .uptrend: Text("⬆️").setupFont(size: 15, weight: .bold)
-                case .downtrend: Text("⬇️").setupFont(size: 15, weight: .bold)
-                case .maintain: Text("−").setupFont(size: 15, weight: .bold)
-                }
+                trendView(trend)
+                    .setupFont(size: 15, weight: .bold)
             }
+        }
+    }
+    
+    @ViewBuilder
+    private func trendView(_ trend: Trend) -> some View {
+        switch trend {
+        case .uptrend: Text("⬆️")
+        case .downtrend: Text("⬇️")
+        case .maintain: Text("−")
         }
     }
 }
