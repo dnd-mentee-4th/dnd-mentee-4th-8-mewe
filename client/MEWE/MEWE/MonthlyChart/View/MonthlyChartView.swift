@@ -17,7 +17,7 @@ struct MonthlyChartView: View {
             NavigationView {
                 VStack {
                     
-                    // Navigation
+                    // MARK: - Navigation
                     HStack {
                         NavigationLink(destination: CalendarView()){
                             Image(systemName: SystemImageName.chevronLeft)
@@ -35,7 +35,7 @@ struct MonthlyChartView: View {
                     
                     Spacer()
                     
-                    // Select Month
+                    // MARK: - Select Month
                     HStack {
                         
                         Button(action: { // move to previous buttonUIScreen
@@ -56,39 +56,30 @@ struct MonthlyChartView: View {
                         })
                         
                     }
-                    
-                    // Chart
+                    VStack {
+                    // MARK: - Chart
                     ZStack {
                         
-                        // 디자인에 따라 bar chart 와 pie chart 중 하나 사용할 예정입니다
-                        BarChartView(data: viewModel.barChartData,
-                                     title: viewModel.sceneTitle,
-                                     style: barChartStyle,
-                                     form: CGSize(width: geometry.size.width - 100,
-                                                  height: geometry.size.height / 3))
-                        
-                        PieChartView(data: viewModel.pieChartdata,
-                                     title: "월말 정산",
-                                     legend: "한 달동안 어떤 감정을 느끼셨나요?",
-                                     style: .init(backgroundColor: .white,
-                                                  accentColor: .yellow,
-                                                  secondGradientColor: .green,
-                                                  textColor: .black,
-                                                  legendTextColor: .gray,
-                                                  dropShadowColor: .black),
-                                     form: CGSize(width: geometry.size.width - 100,
-                                                  height: geometry.size.height / 3),
-                                     dropShadow: true,
-                                     valueSpecifier: " ☺️ ")
+                        LineView(data: viewModel.lineChartdata, title: viewModel.sceneTitle, legend: "이번 달 감정 변화를 확인하세요 👀")
+                            .padding(10)
                         
                         // notice view - not enough data
-                        if viewModel.pieChartdata.count < 10 {
+                        if viewModel.lineChartdata.count < 10 {
                             NoticeView(width: geometry.size.width - 100, height: geometry.size.height / 3)
                                 .cornerRadius(30)
                         }
                     }
-                    Spacer()
-                    Spacer()
+                    
+                    // MARK: - monthly representative emoji
+                    MonthlyRepresentativeEmojiView()
+                        .frame(width: geometry.size.width - 10, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    
+                    // MARK: - monthly analysis
+                    MonthlyAnalysisView()
+                        .frame(width: geometry.size.width, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    
+                }
+                    .frame(maxHeight: .infinity)
                 }
                 .navigationBarHidden(true)
             }

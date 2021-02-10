@@ -14,8 +14,7 @@ class MonthlyChartViewModel: ObservableObject {
     private let january: Int = 1
     private let december: Int = 12
     private(set) var sceneTitle: String = "월말정산"
-    @Published var pieChartdata: [Double] =  [8,23,54,32,12,37,7,23,43]
-    @Published var barChartData: ChartData = ChartData(values: [(" 😀 ", 12), (" 🤩 ", 13), (" 👻 ", 30), (" 😶 ", 11), (" 🤯 ", 3), (" 😭 ", 6), (" 🥺 ", 6), (" 🥳 ", 20), (" 😬 ", 5), (" 😫 ", 15)])
+    @Published var lineChartdata: [Double] =  [8,23,54,32,12,37,7,23,43]
     @Published var currentMonth: Int = 0
     @Published var currentYear: Int = 0
     
@@ -26,7 +25,7 @@ class MonthlyChartViewModel: ObservableObject {
 // MARK: - ChartData
 extension MonthlyChartViewModel {
     func updateChartData() {
-        self.pieChartdata = pieChartdata.shuffled() // 추후 네트워크 연결 후 서버에서 받아온 데이터를 사용하여 수정할 예정입니다.
+        self.lineChartdata = lineChartdata.shuffled() // 추후 네트워크 연결 후 서버에서 받아온 데이터를 사용하여 수정할 예정입니다.
     }
 }
 
