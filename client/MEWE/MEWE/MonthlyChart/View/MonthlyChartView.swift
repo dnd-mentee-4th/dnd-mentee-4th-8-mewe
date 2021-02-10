@@ -60,33 +60,17 @@ struct MonthlyChartView: View {
                     // Chart
                     ZStack {
                         
-                        // 디자인에 따라 bar chart 와 pie chart 중 하나 사용할 예정입니다
-                        BarChartView(data: viewModel.barChartData,
-                                     title: viewModel.sceneTitle,
-                                     style: barChartStyle,
-                                     form: CGSize(width: geometry.size.width - 100,
-                                                  height: geometry.size.height / 3))
-                        
-                        PieChartView(data: viewModel.pieChartdata,
-                                     title: "월말 정산",
-                                     legend: "한 달동안 어떤 감정을 느끼셨나요?",
-                                     style: .init(backgroundColor: .white,
-                                                  accentColor: .yellow,
-                                                  secondGradientColor: .green,
-                                                  textColor: .black,
-                                                  legendTextColor: .gray,
-                                                  dropShadowColor: .black),
-                                     form: CGSize(width: geometry.size.width - 100,
-                                                  height: geometry.size.height / 3),
-                                     dropShadow: true,
-                                     valueSpecifier: " ☺️ ")
+                        LineView(data: viewModel.lineChartdata, title: viewModel.sceneTitle, legend: "이번 달 감정 변화를 확인하세요 👀")
+                            .padding()
                         
                         // notice view - not enough data
-                        if viewModel.pieChartdata.count < 10 {
+                        if viewModel.lineChartdata.count < 10 {
                             NoticeView(width: geometry.size.width - 100, height: geometry.size.height / 3)
                                 .cornerRadius(30)
                         }
                     }
+                    
+                    
                     Spacer()
                     Spacer()
                 }
