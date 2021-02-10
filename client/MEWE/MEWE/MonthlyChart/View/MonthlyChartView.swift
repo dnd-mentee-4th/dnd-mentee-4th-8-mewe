@@ -70,7 +70,7 @@ struct MonthlyChartView: View {
                         }
                     }
                     
-                    
+                    MonthlyRepresentativeEmojiView()
                     Spacer()
                     Spacer()
                 }
