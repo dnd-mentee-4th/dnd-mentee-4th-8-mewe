@@ -24,6 +24,8 @@
 		6A27573525CB035C00D8A573 /* MonthlyChartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27573425CB035C00D8A573 /* MonthlyChartViewModelTests.swift */; };
 		6A27573925CB048700D8A573 /* MonthlyChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */; };
 		6A27573E25CB0A6C00D8A573 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27573D25CB0A6C00D8A573 /* NoticeView.swift */; };
+		6A341C7425CFCD46007FD27A /* HelpBubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A341C6E25CFCCE4007FD27A /* HelpBubble.framework */; };
+		6A341C7525CFCD46007FD27A /* HelpBubble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A341C6E25CFCCE4007FD27A /* HelpBubble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CB25B943860027AEAE /* MEWEApp.swift */; };
 		6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CD25B943860027AEAE /* ContentView.swift */; };
 		6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CF25B943860027AEAE /* Assets.xcassets */; };
@@ -36,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6A341C6D25CFCCE4007FD27A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A341C6925CFCCE3007FD27A /* HelpBubble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A341C5E25CFCCE3007FD27A;
+			remoteInfo = HelpBubble;
+		};
 		6A8DA1DF25B943870027AEAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6A8DA1C025B943860027AEAE /* Project object */;
@@ -51,6 +60,20 @@
 			remoteInfo = MEWE;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A341C7625CFCD46007FD27A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A341C7525CFCD46007FD27A /* HelpBubble.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5C8DDB4525BC03830093580B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
@@ -68,6 +91,7 @@
 		6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartViewModel.swift; sourceTree = "<group>"; };
 		6A27573425CB035C00D8A573 /* MonthlyChartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartViewModelTests.swift; sourceTree = "<group>"; };
 		6A27573D25CB0A6C00D8A573 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		6A341C6925CFCCE3007FD27A /* HelpBubble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HelpBubble.xcodeproj; path = ../../../Desktop/HelpBubble/HelpBubble.xcodeproj; sourceTree = "<group>"; };
 		6A8DA1C825B943860027AEAE /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8DA1CB25B943860027AEAE /* MEWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEApp.swift; sourceTree = "<group>"; };
 		6A8DA1CD25B943860027AEAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A27572525CAFB2300D8A573 /* SwiftUICharts in Frameworks */,
+				6A341C7425CFCD46007FD27A /* HelpBubble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,13 +342,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6A341C6A25CFCCE3007FD27A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A341C6E25CFCCE4007FD27A /* HelpBubble.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A341C7325CFCD46007FD27A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A8DA1BF25B943860027AEAE = {
 			isa = PBXGroup;
 			children = (
+				6A341C6925CFCCE3007FD27A /* HelpBubble.xcodeproj */,
 				6A8DA1CA25B943860027AEAE /* MEWE */,
 				6A8DA1E125B943870027AEAE /* MEWETests */,
 				6A8DA1EC25B943870027AEAE /* MEWEUITests */,
 				6A8DA1C925B943860027AEAE /* Products */,
+				6A341C7325CFCD46007FD27A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,7 +389,6 @@
 				6A8DA1D425B943860027AEAE /* Persistence.swift */,
 				6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */,
 				6A27570325CAC1A700D8A573 /* Utility */,
-				5C8DDB6D25BC16380093580B /* Model */,
 				5C8DDB7125BC16610093580B /* Emoji.swift */,
 				5C93B30E25C013CC0067A723 /* Friend */,
 				5C93B30D25C0139D0067A723 /* UserProfile */,
@@ -398,6 +439,7 @@
 				6A8DA1C425B943860027AEAE /* Sources */,
 				6A8DA1C525B943860027AEAE /* Frameworks */,
 				6A8DA1C625B943860027AEAE /* Resources */,
+				6A341C7625CFCD46007FD27A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,6 +525,12 @@
 			);
 			productRefGroup = 6A8DA1C925B943860027AEAE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6A341C6A25CFCCE3007FD27A /* Products */;
+					ProjectRef = 6A341C6925CFCCE3007FD27A /* HelpBubble.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6A8DA1C725B943860027AEAE /* MEWE */,
@@ -491,6 +539,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6A341C6E25CFCCE4007FD27A /* HelpBubble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HelpBubble.framework;
+			remoteRef = 6A341C6D25CFCCE4007FD27A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6A8DA1C625B943860027AEAE /* Resources */ = {
