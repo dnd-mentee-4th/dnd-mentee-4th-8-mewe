@@ -11,7 +11,7 @@ struct TabsView: View {
     @State private var selection = 1
     var body: some View {
         TabView(selection: $selection) {
-            Text("감정 달력 뷰")
+            CalendarView()
                 .tabItem {
                     Image(systemName: "1.square.fill")
                     Text("감정 달력")
