@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "node": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
@@ -10,12 +11,15 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "project": "tsconfig.json",
         "ecmaVersion": 12,
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint-plugin"
     ],
+    "root": true,
+    "ignorePatterns": [".eslintrc.json"],
     "rules": {
         "no-console": ["error", { "allow": ["clear"] }],
         "semi": ["error", "always"],
