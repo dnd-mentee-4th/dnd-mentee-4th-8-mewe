@@ -14,21 +14,7 @@ struct SelectEmoji: View {
     @State var isRecordingOn = false
     @State var isPublic = true
     var body: some View {
-            VStack{
-                HStack{
-                    Toggle(isOn: $isRecordingOn) {
-                        Image(systemName: self.isPublic ? "lock.open" : "lock")
-                            .font(.system(size: 25, weight:.heavy))
-                            .foregroundColor(.black)
-                    }
-                }
-                
-               
-                CircleView()
-                TextField("write down your feeling", text: $text)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-            }
+        CircleView()
     }
 }
 

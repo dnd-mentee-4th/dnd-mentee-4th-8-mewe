@@ -8,15 +8,25 @@
 import SwiftUI
 
 struct TodayEmojiView: View {
+    @State var isRecordingOn = false
     var body: some View {
-        Text("Today Emoji 영역")
-            .frame(width: 320, height: 400)
-            .background(Color.orange)
+        VStack(){
+            Toggle(isOn: $isRecordingOn) {}
+            Text("Today Emoji 영역")
+                .frame(width: 311, height: 372)
+                .background(Color.gray)
+                
+        }
+        .padding()
     }
+        
 }
 
 struct TodayEmoji_Previews: PreviewProvider {
     static var previews: some View {
-        TodayEmojiView()
+        Group {
+            TodayEmojiView()
+            TodayEmojiView()
+        }
     }
 }
