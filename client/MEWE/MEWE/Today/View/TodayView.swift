@@ -28,7 +28,7 @@ struct TodayView: View {
                 Text(dateForTodayView(date: Date()))
                 TodayEmojiView()
                 Button("담기 완료") {
-                    
+                    // 대표 감정 선택 뷰 올라오기
                 }
                 Spacer(minLength: 0)
                 SelectEmoji()

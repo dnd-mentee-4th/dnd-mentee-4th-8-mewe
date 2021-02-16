@@ -10,7 +10,14 @@ import SwiftUI
 
 struct RecordEmojiView: View {
     var body: some View {
-        Text("Record Emoji View")
+        VStack{
+            Text("오늘의 대표 감정은?")
+                .font(.title)
+            Text("오늘의 내 기분을 대표하는 감정으로 하루를 기록해 봐요!")
+                .font(.subheadline)
+            
+        }
+        
     }
 }
 

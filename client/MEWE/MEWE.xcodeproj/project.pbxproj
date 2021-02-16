@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C75378925DBCF0D0025687E /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C75378825DBCF0D0025687E /* TabsView.swift */; };
+		5C75379125DBEDFC0025687E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C75379025DBEDFC0025687E /* GoogleService-Info.plist */; };
 		5C8DDB4625BC03830093580B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4525BC03830093580B /* TodayView.swift */; };
 		5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */; };
 		5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		5C75378825DBCF0D0025687E /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		5C75379025DBEDFC0025687E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C8DDB4525BC03830093580B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiView.swift; sourceTree = "<group>"; };
 		5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmoji.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				6A8DA1D925B943860027AEAE /* Info.plist */,
+				5C75379025DBEDFC0025687E /* GoogleService-Info.plist */,
 				6A8DA1CB25B943860027AEAE /* MEWEApp.swift */,
 				6A8DA1CD25B943860027AEAE /* ContentView.swift */,
 				6A8DA1CF25B943860027AEAE /* Assets.xcassets */,
@@ -576,6 +579,7 @@
 			files = (
 				6A8DA1D325B943860027AEAE /* Preview Assets.xcassets in Resources */,
 				6A8DA1D025B943860027AEAE /* Assets.xcassets in Resources */,
+				5C75379125DBEDFC0025687E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
