@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C75378925DBCF0D0025687E /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C75378825DBCF0D0025687E /* TabsView.swift */; };
+		5C75379825DBF7A10025687E /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 5C75379725DBF7A10025687E /* PartialSheet */; };
 		5C8DDB4625BC03830093580B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4525BC03830093580B /* TodayView.swift */; };
 		5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */; };
 		5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */; };
@@ -121,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C75379825DBF7A10025687E /* PartialSheet in Frameworks */,
 				6A27572525CAFB2300D8A573 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +469,7 @@
 			name = MEWE;
 			packageProductDependencies = (
 				6A27572425CAFB2300D8A573 /* SwiftUICharts */,
+				5C75379725DBF7A10025687E /* PartialSheet */,
 			);
 			productName = MEWE;
 			productReference = 6A8DA1C825B943860027AEAE /* MEWE.app */;
@@ -541,6 +544,7 @@
 			mainGroup = 6A8DA1BF25B943860027AEAE;
 			packageReferences = (
 				6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */,
+				5C75379625DBF7A10025687E /* XCRemoteSwiftPackageReference "PartialSheet" */,
 			);
 			productRefGroup = 6A8DA1C925B943860027AEAE /* Products */;
 			projectDirPath = "";
@@ -941,6 +945,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C75379625DBF7A10025687E /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.11;
+			};
+		};
 		6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
@@ -952,6 +964,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5C75379725DBF7A10025687E /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C75379625DBF7A10025687E /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
 		6A27572425CAFB2300D8A573 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */;
