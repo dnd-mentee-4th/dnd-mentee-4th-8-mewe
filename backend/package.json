@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "npm run build && npm run start",
+    "deploy":  "gcloud app deploy",
     "build": "nest build",
     "rebuild": "rm -rf ./dist && rm -rf coverage && npm run build",
     "start": "nest start",
