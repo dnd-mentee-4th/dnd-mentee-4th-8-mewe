@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct TodayEmojiView: View {
-    @State var isRecordingOn = false
+    @State var isRecordingOn = true
     var body: some View {
         VStack(){
-            Toggle(isOn: $isRecordingOn) {}
+            Toggle(isOn: $isRecordingOn){
+            }
+            .padding()
             Text("Today Emoji 영역")
                 .frame(width: 311, height: 372)
                 .background(Color.gray)
