@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import PartialSheet
+let sheetManager: PartialSheetManager = PartialSheetManager()
 
 struct TabsView: View {
     @State private var selection = 1
@@ -21,6 +23,7 @@ struct TabsView: View {
                     Image(systemName: "2.square.fill")
                     Text("감정 기록")
                 }
+                .environmentObject(sheetManager)
             Text("감정 지도 뷰")
                 .tabItem {
                     Image(systemName: "3.square.fill")
@@ -33,5 +36,6 @@ struct TabsView: View {
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
         TabsView()
+            .environmentObject(sheetManager)
     }
 }

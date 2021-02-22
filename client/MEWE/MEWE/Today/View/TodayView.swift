@@ -8,6 +8,7 @@
 import SwiftUI
 import PartialSheet
 
+
 struct TodayView: View {
     @State var showPopover = false
     @EnvironmentObject var partialSheetManager : PartialSheetManager
@@ -29,11 +30,11 @@ struct TodayView: View {
                 Text(dateForTodayView(date: Date()))
                 TodayEmojiView()
                 Button("담기 완료!") {
-//                    self.partialSheetManager.showPartialSheet({
-//                        print("sheet dismissed")
-//                    }) {
-//                        RecordEmojiView()
-//                    }
+                    self.partialSheetManager.showPartialSheet({
+                        print("sheet dismissed")
+                    }) {
+                        RecordEmojiView()
+                    }
                 }.padding(8)
                 .foregroundColor(.white)
                 .background(Color.blue)
@@ -43,10 +44,12 @@ struct TodayView: View {
                 SelectEmoji()
             }
         } .navigationBarHidden(true)
+        .addPartialSheet()
     }
     
     
 }
+
 func dateForTodayView(date: Date) -> String {
     let format = DateFormatter()
     format.dateFormat = "dd MMM yyyy"
@@ -56,5 +59,6 @@ func dateForTodayView(date: Date) -> String {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         TodayView()
+            .environmentObject(PartialSheetManager())
     }
 }
