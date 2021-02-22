@@ -38,6 +38,8 @@
 		6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */; };
 		6A8DA1E325B943870027AEAE /* MEWETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1E225B943870027AEAE /* MEWETests.swift */; };
 		6A8DA1EE25B943870027AEAE /* MEWEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */; };
+		6AD0D09125E3D28500E736E1 /* RoundedBottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0D09025E3D28500E736E1 /* RoundedBottomNavigationView.swift */; };
+		6AD0D09725E3D2FA00E736E1 /* EmojiMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0D09625E3D2FA00E736E1 /* EmojiMapView.swift */; };
 		6AE137E025CC1F1800D570F1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE137DF25CC1F1800D570F1 /* Font.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		6A8DA1E925B943870027AEAE /* MEWEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MEWEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEUITests.swift; sourceTree = "<group>"; };
 		6A8DA1EF25B943870027AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD0D09025E3D28500E736E1 /* RoundedBottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBottomNavigationView.swift; sourceTree = "<group>"; };
+		6AD0D09625E3D2FA00E736E1 /* EmojiMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMapView.swift; sourceTree = "<group>"; };
 		6AE137DF25CC1F1800D570F1 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -402,6 +406,7 @@
 				6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */,
 				6A27570325CAC1A700D8A573 /* Utility */,
 				5C8DDB7125BC16610093580B /* Emoji.swift */,
+				6AD0D08C25E3D24200E736E1 /* Common */,
 				5C93B30E25C013CC0067A723 /* Friend */,
 				5C75378725DBCEE90025687E /* Tab */,
 				5C93B30D25C0139D0067A723 /* UserProfile */,
@@ -410,6 +415,7 @@
 				5C8DDB8125BC20C20093580B /* Category */,
 				5C8DDB4A25BC03FA0093580B /* Today */,
 				6A2756F325CABFB000D8A573 /* MonthlyChart */,
+				6AD0D08E25E3D25700E736E1 /* EmojiMap */,
 				6A8DA1D125B943860027AEAE /* Preview Content */,
 			);
 			path = MEWE;
@@ -448,6 +454,30 @@
 				6A94405325DBB2A70097826A /* HelpBubble.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6AD0D08C25E3D24200E736E1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0D09025E3D28500E736E1 /* RoundedBottomNavigationView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6AD0D08E25E3D25700E736E1 /* EmojiMap */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0D08F25E3D26100E736E1 /* View */,
+			);
+			path = EmojiMap;
+			sourceTree = "<group>";
+		};
+		6AD0D08F25E3D26100E736E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6AD0D09625E3D2FA00E736E1 /* EmojiMapView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,6 +641,7 @@
 				5C8DDB7D25BC20660093580B /* TodayEmojiView.swift in Sources */,
 				6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */,
 				6AE137E025CC1F1800D570F1 /* Font.swift in Sources */,
+				6AD0D09125E3D28500E736E1 /* RoundedBottomNavigationView.swift in Sources */,
 				5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */,
 				6A7B308B25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift in Sources */,
 				5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */,
@@ -627,6 +658,7 @@
 				6A2756F625CABFD900D8A573 /* MonthlyChartView.swift in Sources */,
 				5C8DDB4625BC03830093580B /* TodayView.swift in Sources */,
 				5C93B31F25C014420067A723 /* FriendView.swift in Sources */,
+				6AD0D09725E3D2FA00E736E1 /* EmojiMapView.swift in Sources */,
 				6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
