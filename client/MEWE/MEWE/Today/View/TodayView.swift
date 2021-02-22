@@ -43,7 +43,8 @@ struct TodayView: View {
                 .position(x: 330)
                 SelectEmoji()
             }
-        } .navigationBarHidden(true)
+            .navigationBarHidden(true)
+        }
         .addPartialSheet()
     }
     

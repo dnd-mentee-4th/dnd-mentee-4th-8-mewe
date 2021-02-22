@@ -35,8 +35,9 @@ struct RecordEmojiView: View {
                 })
             }
             
-            .navigationBarItems(leading: LeadingNavView(), trailing: TrailingNavView())
+            .navigationBarItems(leading: LeadingNavView(), trailing: TrailingNavViewForEmoji())
         }
+        .navigationBarBackButtonHidden(true)
         .padding()
         .frame(height: 500)
         
@@ -53,7 +54,7 @@ struct LeadingNavView: View {
         })
       }
     }
-struct TrailingNavView: View {
+struct TrailingNavViewForEmoji: View {
     var body: some View {
         NavigationLink(
             destination: RecordEmojiWhereView()){

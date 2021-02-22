@@ -12,6 +12,7 @@
 		5C7537A425E406540025687E /* RecordEmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537A325E406540025687E /* RecordEmojiViewModel.swift */; };
 		5C7537A925E40FCE0025687E /* RecordEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537A825E40FCE0025687E /* RecordEmojiCell.swift */; };
 		5C7537AD25E42AE10025687E /* RecordEmojiWhereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537AC25E42AE10025687E /* RecordEmojiWhereView.swift */; };
+		5C7537D225E431AD0025687E /* RecordEmojiTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537D125E431AD0025687E /* RecordEmojiTextView.swift */; };
 		5C8DDB4625BC03830093580B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4525BC03830093580B /* TodayView.swift */; };
 		5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */; };
 		5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */; };
@@ -86,6 +87,7 @@
 		5C7537A325E406540025687E /* RecordEmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiViewModel.swift; sourceTree = "<group>"; };
 		5C7537A825E40FCE0025687E /* RecordEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiCell.swift; sourceTree = "<group>"; };
 		5C7537AC25E42AE10025687E /* RecordEmojiWhereView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiWhereView.swift; sourceTree = "<group>"; };
+		5C7537D125E431AD0025687E /* RecordEmojiTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiTextView.swift; sourceTree = "<group>"; };
 		5C8DDB4525BC03830093580B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiView.swift; sourceTree = "<group>"; };
 		5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmoji.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */,
 				5C7537A825E40FCE0025687E /* RecordEmojiCell.swift */,
 				5C7537AC25E42AE10025687E /* RecordEmojiWhereView.swift */,
+				5C7537D125E431AD0025687E /* RecordEmojiTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				6A7B309A25D3A3DB00AC17C6 /* MonthlyAnalysisViewModel.swift in Sources */,
 				5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */,
 				5C8DDB7D25BC20660093580B /* TodayEmojiView.swift in Sources */,
+				5C7537D225E431AD0025687E /* RecordEmojiTextView.swift in Sources */,
 				6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */,
 				6AE137E025CC1F1800D570F1 /* Font.swift in Sources */,
 				5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */,
