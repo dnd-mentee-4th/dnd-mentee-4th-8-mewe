@@ -10,4 +10,6 @@ import Foundation
 enum SystemImageName {
     static let chevronLeft = "chevron.left"
     static let chevronRight = "chevron.right"
+    static let arrowLeft = "arrow.left"
+    static let arrowRight = "arrow.right"
 }
