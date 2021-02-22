@@ -13,19 +13,25 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
     let isLast : Bool
     let color : Color
     let content: Content
+    let backButtonImageName: String
+    let nextButtonImageName: String
     @State var active = false
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     init(destination: Destination,
          isRoot : Bool,
          isLast : Bool,
-         color : Color,
-         @ViewBuilder titleContent: () -> Content) {
+         color : Color = .black,
+         backButtonImageName: String = SystemImageName.arrowLeft,
+         nextButtonImageName: String = SystemImageName.arrowRight,
+         @ViewBuilder content: () -> Content) {
         self.destination = destination
         self.isRoot = isRoot
         self.isLast = isLast
         self.color = color
-        self.content = titleContent()
+        self.backButtonImageName = backButtonImageName
+        self.nextButtonImageName = nextButtonImageName
+        self.content = content()
     }
     
     var body: some View {
@@ -43,9 +49,9 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
                         Spacer()
                         HStack {
                             // Back Button
-                            Image(systemName: SystemImageName.arrowLeft)
+                            Image(systemName: backButtonImageName)
                                     .frame(width: 20)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(color)
                                 .onTapGesture(count: 1, perform: {
                                     self.mode.wrappedValue.dismiss()
                                 }).opacity(isRoot ? 0 : 1)
@@ -56,9 +62,9 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
                             
                             // Next Button
                             Spacer()
-                            Image(systemName: SystemImageName.arrowRight)
+                            Image(systemName: nextButtonImageName)
                                 .frame(width: 20)
-                                .foregroundColor(.black)
+                                .foregroundColor(color)
                                 .onTapGesture(count: 1, perform: {
                                     self.active.toggle()
                                 })
