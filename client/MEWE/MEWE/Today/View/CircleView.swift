@@ -17,10 +17,11 @@ struct CircleView: View {
                     }){
                         Circle()
                             .fill(Color.white)
-                            .frame(width: 70, height: 70)
+                            .frame(width: 54.8, height: 54.8)
                     }
                     .shadow(radius: 5)
                     .foregroundColor(Color.white)
+                    .padding(.trailing)
                 }
             }.padding()
         }.frame(height:100)

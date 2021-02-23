@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import PartialSheet
+
 
 struct TodayView: View {
     @State var showPopover = false
-    
+    @EnvironmentObject var partialSheetManager : PartialSheetManager
+
     var body: some View {
-        
         NavigationView{
             VStack{
                 HStack(){
@@ -27,19 +29,28 @@ struct TodayView: View {
                 
                 Text(dateForTodayView(date: Date()))
                 TodayEmojiView()
-                Button("담기 완료") {
-                    // 대표 감정 선택 뷰 올라오기
-                }
-                Spacer(minLength: 0)
+                Button("담기 완료!") {
+                    self.partialSheetManager.showPartialSheet({
+                        print("sheet dismissed")
+                    }) {
+                        RecordEmojiView()
+                    }
+                }.padding(8)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(40)
+                .font(Font.system(size: 12))
+                .position(x: 330)
                 SelectEmoji()
             }
-            
-            
-        } .navigationBarHidden(true)
+            .navigationBarHidden(true)
+        }
+        .addPartialSheet()
     }
     
     
 }
+
 func dateForTodayView(date: Date) -> String {
     let format = DateFormatter()
     format.dateFormat = "dd MMM yyyy"
@@ -49,5 +60,6 @@ func dateForTodayView(date: Date) -> String {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         TodayView()
+            .environmentObject(PartialSheetManager())
     }
 }
