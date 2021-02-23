@@ -12,6 +12,7 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
     let isRoot : Bool
     let isLast : Bool
     let color : Color
+    let height: CGFloat
     let content: Content
     let backButtonImageName: String
     let nextButtonImageName: String
@@ -19,9 +20,10 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     init(destination: Destination,
-         isRoot : Bool,
-         isLast : Bool,
-         color : Color = .black,
+         isRoot: Bool,
+         isLast: Bool,
+         color: Color = .black,
+         height: CGFloat = 100,
          backButtonImageName: String = SystemImageName.arrowLeft,
          nextButtonImageName: String = SystemImageName.arrowRight,
          @ViewBuilder content: () -> Content) {
@@ -29,6 +31,7 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
         self.isRoot = isRoot
         self.isLast = isLast
         self.color = color
+        self.height = height
         self.backButtonImageName = backButtonImageName
         self.nextButtonImageName = nextButtonImageName
         self.content = content()
@@ -42,7 +45,7 @@ struct RoundedBottomNavigationView<Content: View, Destination : View>: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
                                         .fill(Color.white)
-                            .frame(width: geometry.size.width, height: 100)
+                            .frame(width: geometry.size.width, height: height)
                             .mask(RoundedRectangle(cornerRadius: 25, style: .continuous))
                             .shadow(color: Color(UIColor.lightGray), radius: 5, x: 0, y: 5)
                                 .edgesIgnoringSafeArea(.top)
