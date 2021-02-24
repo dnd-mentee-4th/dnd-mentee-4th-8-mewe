@@ -19,11 +19,11 @@ struct TabsView: View {
                     Text("감정 달력")
                 }
             TodayView()
+                .environmentObject(sheetManager)
                 .tabItem {
                     Image(systemName: "2.square.fill")
                     Text("감정 기록")
                 }
-                .environmentObject(sheetManager)
             Text("감정 지도 뷰")
                 .tabItem {
                     Image(systemName: "3.square.fill")

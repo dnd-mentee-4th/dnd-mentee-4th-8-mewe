@@ -12,14 +12,25 @@ struct RecordEmojiCell: View {
     static let row = 5
     let width = (UIScreen.main.bounds.width/2) - 20
     
+    private let action: (() -> Void)?
+    
+    init(action: (() -> Void)? = nil) {
+        self.action = action
+    }
+    
     var body: some View {
         
+        Button(action: {
+            action?()
+        }, label: {
             Circle()
                 .fill(Color.white)
                 .frame(width: 54.8, height: 54.8)
                 .shadow(radius: 5)
                 .foregroundColor(Color.white)
                 .padding(30)
+        })
+        .contentShape(Circle())
         
     }
 }
