@@ -10,44 +10,85 @@ import PartialSheet
 
 
 struct TodayView: View {
-    @State var showPopover = false
+    
     @EnvironmentObject var partialSheetManager : PartialSheetManager
 
     var body: some View {
-        NavigationView{
-            VStack{
+        NavigationView {
+            VStack {
                 HStack(){
                     NavigationLink(
-                        destination: CategoryView()){
+                        destination: CategoryView()
+                    ){
                         Image(systemName: "line.horizontal.3.decrease")
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
                     }
+                    .isDetailLink(false)
+                    
                     Spacer(minLength: 0)
                 }
                 .padding()
                 
                 Text(dateForTodayView(date: Date()))
                 TodayEmojiView()
-                Button("담기 완료!") {
-                    self.partialSheetManager.showPartialSheet({
-                        print("sheet dismissed")
+                
+                HStack {
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        showPartialSheet()
                     }) {
-                        RecordEmojiView()
-                    }
-                }.padding(8)
+                        Text("담기 완료!")
+                            .modifier(AddDoneBtnStyling())
+                    } //: B
+                    
+                } //: H
+                .padding(.horizontal, 16)
+                
+                SelectEmoji()
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .addPartialSheet(style: getPartialSheetStyle())
+            .navigationBarHidden(true)
+        }
+        
+    }
+    
+    /// Open Partial Sheet
+    private func showPartialSheet() {
+        partialSheetManager.showPartialSheet {
+            RecordEmojiView()
+                .frame(height: 450)
+                .environmentObject(partialSheetManager)
+                .padding(.horizontal)
+        }
+    }
+    
+    /// PartialSheet Style
+    private func getPartialSheetStyle() -> PartialSheetStyle {
+        return PartialSheetStyle(
+            background: .solid(.white),
+            handlerBarColor: .clear,
+            enableCover: true,
+            coverColor: Color.black.opacity(0.2),
+            cornerRadius: 50,
+            minTopDistance: 200
+        )
+    }
+    
+    /// Style for Add Done Button
+    fileprivate struct AddDoneBtnStyling: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .padding(8)
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(40)
                 .font(Font.system(size: 12))
-                .position(x: 330)
-                SelectEmoji()
-            }
-            .navigationBarHidden(true)
         }
-        .addPartialSheet()
     }
-    
     
 }
 
@@ -57,9 +98,5 @@ func dateForTodayView(date: Date) -> String {
 
     return format.string(from: date)
 }
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayView()
-            .environmentObject(PartialSheetManager())
-    }
-}
+
+

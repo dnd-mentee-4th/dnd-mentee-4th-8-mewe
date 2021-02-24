@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
-
+var vm = CircleViewModel()
 struct CircleView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 10){
                 ForEach(0..<10)  { index in
                     Button(action: {
-                        // 작은(?) 이모지들 선택 후 메인 이모지 선택으로 넘어가ㄱ
+                        print(index)
+                        vm.choose(selected: index)
                     }){
                         Circle()
                             .fill(Color.white)
