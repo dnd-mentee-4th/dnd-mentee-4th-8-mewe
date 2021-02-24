@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mewe_이모지_편안-6.svg",
+      "filename" : "emoji_ease.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "emoji_ease-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "emoji_ease-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
