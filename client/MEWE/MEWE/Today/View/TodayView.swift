@@ -39,6 +39,7 @@ struct TodayView: View {
                     
                     Button(action: {
                         showPartialSheet()
+
                     }) {
                         Text("담기 완료!")
                             .modifier(AddDoneBtnStyling())
@@ -100,3 +101,9 @@ func dateForTodayView(date: Date) -> String {
 }
 
 
+struct TodayView_Previews: PreviewProvider {
+    static var previews: some View {
+        TodayView()
+            .environmentObject(PartialSheetManager())
+    }
+}

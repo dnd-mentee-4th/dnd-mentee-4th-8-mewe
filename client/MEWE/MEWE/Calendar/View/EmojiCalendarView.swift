@@ -21,6 +21,7 @@ class EmojiCalendar: UIViewController, FSCalendarDelegate{
         calendar.appearance.caseOptions = FSCalendarCaseOptions.weekdayUsesSingleUpperCase
         calendar.appearance.headerMinimumDissolvedAlpha = 0.0
         calendar.backgroundColor = UIColor.white.withAlphaComponent(0)
+        calendar.today = nil
 //        calendar.appearance.eventDefaultColor = .gray
 //        calendar.appearance.eventSelectionColor = .gray
 
@@ -40,18 +41,27 @@ extension EmojiCalendar {
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
         calendar.scope = .month
     }
+
+    
 }
 
 struct CalendarView: View {
+    var calendarController = EmojiCalendarController()
     var body: some View {
         VStack{
-
-            EmojiCalendarController()
-            Button(action: {
-
-            }, label: {
-                Text("close")
-            })
+            HStack {
+                Button(action: {
+                    calendarController.showMonthMode()
+                }) {
+                    Image("Calendar_BackButton")
+                }
+                .padding()
+                Spacer()
+            }
+            calendarController
+            
+            //Details
+            Text("details..")
 
         }
 
@@ -60,14 +70,18 @@ struct CalendarView: View {
 }
 
 struct EmojiCalendarController: UIViewControllerRepresentable {
+    var calendar = EmojiCalendar()
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<EmojiCalendarController>) -> EmojiCalendar {
-        return EmojiCalendar()
+        return calendar
     }
 
     func updateUIViewController(_ uiViewController: EmojiCalendar, context: UIViewControllerRepresentableContext<EmojiCalendarController>) {
     }
 
+    func showMonthMode() {
+        calendar.calendar.scope = .month
+    }
 }
 
 struct CalendarView_Previews: PreviewProvider {
