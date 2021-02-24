@@ -9,51 +9,96 @@ import SwiftUI
 import PartialSheet
 
 struct RecordEmojiView: View {
+    
+    let recordEmojiViewModel = RecordEmojiViewModel()
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
+    @Environment(\.presentationMode) private var presentaionMode
+    @EnvironmentObject private var manager: PartialSheetManager
+    
     @State var selection: Bool? = false
     @State var selectedItems: Int!
-    @EnvironmentObject var partialSheet : PartialSheetManager
-    let recordEmojiViewModel = RecordEmojiViewModel()
     
     var body: some View {
-        NavigationView{
-            VStack {
-                Text("오늘의 대표 감정은?")
-                    .font(.title)
-                Text("오늘의 내 기분을 대표하는 감정으로 하루를 기록해 봐요!")
-                    .font(.subheadline)
-                ScrollView(.vertical, showsIndicators: false, content: {
-                    ForEach(0..<RecordEmojiCell.row){ i in
-                        HStack{
-                            ForEach(0..<RecordEmojiCell.col) { j in
-                                RecordEmojiCell().onTapGesture {
-                                    let index = j+(i*2)
-                                    print("\(index)")
+        NavigationView {
+            GeometryReader { geo in
+                VStack {
+                    Text("오늘의 대표 감정은?")
+                        .font(.title)
+                    
+                    Text("오늘의 내 기분을 대표하는 감정으로 하루를 기록해 봐요!")
+                        .font(.subheadline)
+                    Spacer()
+                    
+                    GeometryReader { scrollGeo in
+                        ScrollView(showsIndicators: false) {
+                            LazyVGrid(columns: columns) {
+                                let numOfEmojis = RecordEmojiCell.col * RecordEmojiCell.row
+                                ForEach(0..<numOfEmojis, id: \.self) { index in
+                                    RecordEmojiCell {
+                                        print(index)
+                                    }
                                 }
-                            }
-                        }
-                    }
-                })
-            }
-            
-            .navigationBarItems(leading: LeadingNavView(), trailing: TrailingNavViewForEmoji())
-        }
-        .navigationBarBackButtonHidden(true)
-        .padding()
-        .frame(height: 500)
-        
+                            } //: V
+                        } //: S
+                        .frame(width: scrollGeo.size.width, height: scrollGeo.size.height)
+                    } //: G
+                    Spacer(minLength: 0)
+                } //: V
+                .frame(width: geo.size.width, height: geo.size.height)
+            } //: G
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: leadingNavBtn(), trailing: traillingNavBtn())
+        } //: N
     }
+    
+    /// Leading nav button
+    private func leadingNavBtn() -> some View {
+        return LeadingNavView {
+            closePartialSheet()
+        }
+    }
+    
+    /// Close PartialSheet
+    private func closePartialSheet() {
+        DispatchQueue.main.async {
+            withAnimation {
+                manager.closePartialSheet()
+            }
+        }
+    }
+    
+    /// Trailling nav button
+    private func traillingNavBtn() -> some View {
+        return NavigationLink(
+            destination: RecordEmojiWhereView()
+        ){
+            Image("RecordEmoji_nextBtn")
+                .font(.system(size: 25, weight:.heavy))
+                .foregroundColor(.black)
+        }
+    }
+    
 }
 struct LeadingNavView: View {
-      var body: some View {
+    
+    private let action: (() -> Void)?
+    init(action: (() -> Void)? = nil) {
+        self.action = action
+    }
+    var body: some View {
         Button(action: {
-            //dismiss....
+            action?()
         }, label: {
             Image("RecordEmoji_exitBtn")
                 .font(.system(size: 25, weight:.heavy))
                 .foregroundColor(.black)
         })
-      }
     }
+}
 struct TrailingNavViewForEmoji: View {
     var body: some View {
         NavigationLink(
@@ -62,12 +107,6 @@ struct TrailingNavViewForEmoji: View {
                 .font(.system(size: 25, weight:.heavy))
                 .foregroundColor(.black)
         }
-    }
-}
-
-extension RecordEmojiView{
-    private func buttonPressed(with title: String){
-        // if self.selectedTitles.
     }
 }
 

@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct RecordEmojiWhereView: View {
+    
+    @Environment(\.presentationMode) private var presentationMode
+    
     var body: some View {
-        NavigationView{
             VStack {
                 Text("오늘 하루를 어디에서 보냈나요?")
                     .font(.title)
@@ -29,10 +31,18 @@ struct RecordEmojiWhereView: View {
                     }
                 })
                 .padding()
+                
+                Spacer(minLength: 0)
             }
             
-            .navigationBarItems(leading: LeadingNavView(), trailing: TrailingNavViewForWhere())
-        }
+            .navigationBarItems(
+                leading: LeadingNavView() {
+                    DispatchQueue.main.async {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                },
+                trailing: TrailingNavViewForWhere()
+            )
         .navigationBarBackButtonHidden(true)
 
         .padding()
