@@ -22,12 +22,11 @@ struct RecordEmojiWhereView: View {
                 NavigationLink(
                     destination: EmptyView()){
                     Text("감정 지도 바로가기")
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8.0)
-                                .stroke(lineWidth: 2.0)
-                                .foregroundColor(.blue)
-                            
-                        ).padding()
+                        .foregroundColor(.white)
+                        .background(RoundedRectangle(cornerRadius: 50)
+                                        .fill(Color.blue)
+                                        .frame(width: 343, height: 66, alignment: .center))
+                        .padding()
                 }
             })
             .padding()

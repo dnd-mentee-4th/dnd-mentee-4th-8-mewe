@@ -49,6 +49,7 @@ struct TodayView: View {
                 
                 SelectEmoji()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .addPartialSheet(style: getPartialSheetStyle())
             .navigationBarHidden(true)
         }
@@ -59,8 +60,9 @@ struct TodayView: View {
     private func showPartialSheet() {
         partialSheetManager.showPartialSheet {
             RecordEmojiView()
-                .frame(height: 500)
+                .frame(height: 450)
                 .environmentObject(partialSheetManager)
+                .padding(.horizontal)
         }
     }
     
@@ -71,7 +73,7 @@ struct TodayView: View {
             handlerBarColor: .clear,
             enableCover: true,
             coverColor: Color.black.opacity(0.2),
-            cornerRadius: 20,
+            cornerRadius: 50,
             minTopDistance: 200
         )
     }
