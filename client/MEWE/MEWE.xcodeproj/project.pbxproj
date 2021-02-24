@@ -14,6 +14,7 @@
 		5C7537AD25E42AE10025687E /* RecordEmojiWhereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537AC25E42AE10025687E /* RecordEmojiWhereView.swift */; };
 		5C7537D225E431AD0025687E /* RecordEmojiTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537D125E431AD0025687E /* RecordEmojiTextView.swift */; };
 		5C7537F125E51F020025687E /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7537F025E51F020025687E /* CircleViewModel.swift */; };
+		5C75380525E610310025687E /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 5C75380425E610310025687E /* FSCalendar */; };
 		5C8DDB4625BC03830093580B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4525BC03830093580B /* TodayView.swift */; };
 		5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */; };
 		5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB5625BC10FA0093580B /* SelectEmoji.swift */; };
@@ -141,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C75379825DBF7A10025687E /* PartialSheet in Frameworks */,
+				5C75380525E610310025687E /* FSCalendar in Frameworks */,
 				6A27572525CAFB2300D8A573 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +515,7 @@
 			packageProductDependencies = (
 				6A27572425CAFB2300D8A573 /* SwiftUICharts */,
 				5C75379725DBF7A10025687E /* PartialSheet */,
+				5C75380425E610310025687E /* FSCalendar */,
 			);
 			productName = MEWE;
 			productReference = 6A8DA1C825B943860027AEAE /* MEWE.app */;
@@ -588,6 +591,7 @@
 			packageReferences = (
 				6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */,
 				5C75379625DBF7A10025687E /* XCRemoteSwiftPackageReference "PartialSheet" */,
+				5C75380325E610310025687E /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 6A8DA1C925B943860027AEAE /* Products */;
 			projectDirPath = "";
@@ -1005,6 +1009,14 @@
 				minimumVersion = 2.1.11;
 			};
 		};
+		5C75380325E610310025687E /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
 		6A27572325CAFB2300D8A573 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
@@ -1020,6 +1032,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C75379625DBF7A10025687E /* XCRemoteSwiftPackageReference "PartialSheet" */;
 			productName = PartialSheet;
+		};
+		5C75380425E610310025687E /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C75380325E610310025687E /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 		6A27572425CAFB2300D8A573 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
