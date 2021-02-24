@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mewe_이모지_행복-8.svg",
+      "filename" : "mewe_이모지_행복.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "mewe_이모지_행복-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "mewe_이모지_행복-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
