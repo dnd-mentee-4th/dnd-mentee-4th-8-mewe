@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mewe_이모지_걱정.png",
+      "filename" : "emoji_concern.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "mewe_이모지_걱정-1.png",
+      "filename" : "emoji_concern-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "mewe_이모지_걱정-2.png",
+      "filename" : "emoji_concern-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

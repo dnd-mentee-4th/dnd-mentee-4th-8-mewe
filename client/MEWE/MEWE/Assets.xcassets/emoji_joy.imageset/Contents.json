@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mewe_이모지_즐거움.png",
+      "filename" : "emoji_joy.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "mewe_이모지_즐거움-1.png",
+      "filename" : "emoji_joy-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "mewe_이모지_즐거움-2.png",
+      "filename" : "emoji_joy-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
