@@ -47,15 +47,17 @@ extension EmojiCalendar {
 
 struct CalendarView: View {
     var calendarController = EmojiCalendarController()
+    //var backStyle = backButtonStyle()
     var body: some View {
         VStack{
             HStack {
                 Button(action: {
                     calendarController.showMonthMode()
+                    
                 }) {
                     Image("Calendar_BackButton")
-                }
-                .padding()
+                }.padding()
+                .buttonStyle(backButtonStyle(isWeekMode: calendarController.isWeekMode()))
                 Spacer()
             }
             calendarController
@@ -64,10 +66,22 @@ struct CalendarView: View {
             Text("details..")
 
         }
-
-
     }
 }
+struct backButtonStyle: PrimitiveButtonStyle {
+    var isWeekMode: Bool
+    func makeBody(configuration: Configuration) -> some View {
+        MyButton(configuration: configuration)
+    }
+    struct MyButton: View {
+        let configuration: PrimitiveButtonStyle.Configuration
+        var body: some View {
+            return configuration.label
+                .opacity(1)
+        }
+    }
+}
+
 
 struct EmojiCalendarController: UIViewControllerRepresentable {
     var calendar = EmojiCalendar()
@@ -81,6 +95,14 @@ struct EmojiCalendarController: UIViewControllerRepresentable {
 
     func showMonthMode() {
         calendar.calendar.scope = .month
+    }
+    
+    func isWeekMode() -> Bool {
+        if calendar.calendar.scope == .week {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
