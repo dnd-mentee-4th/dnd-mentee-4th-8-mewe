@@ -104,10 +104,9 @@ struct TrailingNavViewForEmoji: View {
         NavigationLink(
             destination: RecordEmojiWhereView()){
             Image("RecordEmoji_nextBtn")
-                .font(.system(size: 25, weight:.heavy))
-                .foregroundColor(.black)
         }
     }
+
 }
 
 struct RecordEmojiView_Previews: PreviewProvider {
