@@ -24,7 +24,8 @@ struct TabsView: View {
                     Image(systemName: "2.square.fill")
                     Text("감정 기록")
                 }
-            Text("감정 지도 뷰")
+            EmojiMapView()
+                .environmentObject(sheetManager)
                 .tabItem {
                     Image(systemName: "3.square.fill")
                     Text("감정 지도")
