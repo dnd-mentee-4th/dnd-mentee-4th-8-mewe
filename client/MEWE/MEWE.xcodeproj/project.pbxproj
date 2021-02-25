@@ -46,6 +46,13 @@
 		6A8DA1EE25B943870027AEAE /* MEWEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */; };
 		6A9D338125E54A75000A3E8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D338025E54A75000A3E8D /* Color.swift */; };
 		6A9D338525E54A8E000A3E8D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D338425E54A8E000A3E8D /* Image.swift */; };
+		6AA56B6225E63615001F6819 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56B6125E63615001F6819 /* MapView.swift */; };
+		6AA56B6825E63730001F6819 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56B6725E63730001F6819 /* MapViewModel.swift */; };
+		6AA56B6C25E63763001F6819 /* EmojiLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56B6B25E63763001F6819 /* EmojiLocation.swift */; };
+		6AA56B7425E6B331001F6819 /* EmojiCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56B7325E6B331001F6819 /* EmojiCardView.swift */; };
+		6ABB230D25E782D500ABC59A /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB230C25E782D500ABC59A /* Reaction.swift */; };
+		6ABB231225E7918E00ABC59A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB231125E7918E00ABC59A /* Card.swift */; };
+		6ABB231625E7971F00ABC59A /* MKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB231525E7971F00ABC59A /* MKPointAnnotation.swift */; };
 		6AC1933525E407F000C8BBA3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1933425E407F000C8BBA3 /* SearchBar.swift */; };
 		6AC1933F25E4165B00C8BBA3 /* CalendarSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1933E25E4165B00C8BBA3 /* CalendarSheetView.swift */; };
 		6AD0D09125E3D28500E736E1 /* RoundedBottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0D09025E3D28500E736E1 /* RoundedBottomNavigationView.swift */; };
@@ -133,6 +140,13 @@
 		6A8DA1EF25B943870027AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A9D338025E54A75000A3E8D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		6A9D338425E54A8E000A3E8D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		6AA56B6125E63615001F6819 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		6AA56B6725E63730001F6819 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		6AA56B6B25E63763001F6819 /* EmojiLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiLocation.swift; sourceTree = "<group>"; };
+		6AA56B7325E6B331001F6819 /* EmojiCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCardView.swift; sourceTree = "<group>"; };
+		6ABB230C25E782D500ABC59A /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		6ABB231125E7918E00ABC59A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		6ABB231525E7971F00ABC59A /* MKPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotation.swift; sourceTree = "<group>"; };
 		6AC1933425E407F000C8BBA3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		6AC1933E25E4165B00C8BBA3 /* CalendarSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSheetView.swift; sourceTree = "<group>"; };
 		6AD0D09025E3D28500E736E1 /* RoundedBottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBottomNavigationView.swift; sourceTree = "<group>"; };
@@ -475,10 +489,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6AA56B5F25E635D9001F6819 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AA56B6725E63730001F6819 /* MapViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		6AA56B6025E635E7001F6819 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AA56B6B25E63763001F6819 /* EmojiLocation.swift */,
+				6ABB231125E7918E00ABC59A /* Card.swift */,
+				6ABB231525E7971F00ABC59A /* MKPointAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6AD0D08C25E3D24200E736E1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				6AD0D09025E3D28500E736E1 /* RoundedBottomNavigationView.swift */,
+				6ABB230C25E782D500ABC59A /* Reaction.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -486,6 +519,8 @@
 		6AD0D08E25E3D25700E736E1 /* EmojiMap */ = {
 			isa = PBXGroup;
 			children = (
+				6AA56B6025E635E7001F6819 /* Models */,
+				6AA56B5F25E635D9001F6819 /* View Model */,
 				6AD0D08F25E3D26100E736E1 /* View */,
 			);
 			path = EmojiMap;
@@ -497,6 +532,8 @@
 				6AD0D09625E3D2FA00E736E1 /* EmojiMapView.swift */,
 				6AC1933425E407F000C8BBA3 /* SearchBar.swift */,
 				6AC1933E25E4165B00C8BBA3 /* CalendarSheetView.swift */,
+				6AA56B6125E63615001F6819 /* MapView.swift */,
+				6AA56B7325E6B331001F6819 /* EmojiCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,11 +700,14 @@
 				5C8DDB5C25BC11980093580B /* CircleView.swift in Sources */,
 				5C7537A425E406540025687E /* RecordEmojiViewModel.swift in Sources */,
 				5C7537A925E40FCE0025687E /* RecordEmojiCell.swift in Sources */,
+				6ABB230D25E782D500ABC59A /* Reaction.swift in Sources */,
 				6A7B309A25D3A3DB00AC17C6 /* MonthlyAnalysisViewModel.swift in Sources */,
+				6AA56B6C25E63763001F6819 /* EmojiLocation.swift in Sources */,
 				5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */,
 				5C8DDB7D25BC20660093580B /* TodayEmojiView.swift in Sources */,
 				5C7537D225E431AD0025687E /* RecordEmojiTextView.swift in Sources */,
 				6A8DA1D525B943860027AEAE /* Persistence.swift in Sources */,
+				6AA56B7425E6B331001F6819 /* EmojiCardView.swift in Sources */,
 				6AE137E025CC1F1800D570F1 /* Font.swift in Sources */,
 				6AD0D09125E3D28500E736E1 /* RoundedBottomNavigationView.swift in Sources */,
 				5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */,
@@ -675,13 +715,17 @@
 				5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */,
 				5C7537F125E51F020025687E /* CircleViewModel.swift in Sources */,
 				5C75378925DBCF0D0025687E /* TabsView.swift in Sources */,
-				5C93B31525C014300067A723 /* EmojiCalendarView.swift in Sources */,
+				5C93B31525C014300067A723 /* CalendarView.swift in Sources */,
+				6AA56B6825E63730001F6819 /* MapViewModel.swift in Sources */,
 				5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */,
 				6AC1933525E407F000C8BBA3 /* SearchBar.swift in Sources */,
+				6ABB231625E7971F00ABC59A /* MKPointAnnotation.swift in Sources */,
 				6A8DA1CE25B943860027AEAE /* ContentView.swift in Sources */,
 				6A27570525CAC1C000D8A573 /* SystemImageName.swift in Sources */,
 				5C8DDB7225BC16610093580B /* Emoji.swift in Sources */,
+				6ABB231225E7918E00ABC59A /* Card.swift in Sources */,
 				6A9D338125E54A75000A3E8D /* Color.swift in Sources */,
+				6AA56B6225E63615001F6819 /* MapView.swift in Sources */,
 				6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */,
 				6A7B30A425D3A4E200AC17C6 /* EmotionAnalysis.swift in Sources */,
 				6A27573E25CB0A6C00D8A573 /* NoticeView.swift in Sources */,

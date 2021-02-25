@@ -20,4 +20,20 @@ extension Image {
     static let emoji_proud = Image("emoji_proud")
     static let emoji_sadness = Image("emoji_sadness")
     static let emoji_tiredness = Image("emoji_tiredness")
+    static let locationFill = Image(systemName: "location.fill")
+    static let network = Image(systemName: "network")
+    static let map = Image(systemName: "map")
+    static let RecordEmoji_nextBtn = Image("RecordEmoji_nextBtn")
+}
+
+protocol ImageModifier {
+    associatedtype Body : View
+
+    func body(image: Image) -> Self.Body
+}
+
+extension Image {
+    func modifier<M>(_ modifier: M) -> some View where M: ImageModifier {
+        modifier.body(image: self)
+    }
 }
