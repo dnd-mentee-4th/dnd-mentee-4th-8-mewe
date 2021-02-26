@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NoticeView: View {
     
+    @Binding var isPresented: Bool 
     let width: CGFloat
     let height: CGFloat
     
@@ -16,6 +17,15 @@ struct NoticeView: View {
         
         ZStack {
             VStack() {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.isPresented = false
+                    }) {
+                        Image.xmark
+                            .foregroundColor(.black)
+                    }
+                }
                 Text("데이터를 \n모으는 중이에요 📊")
                     .setupFont(size: 25, weight: .bold)
                     .multilineTextAlignment(.center)

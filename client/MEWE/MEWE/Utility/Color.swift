@@ -13,6 +13,7 @@ extension Color {
     static let softBlue = Color("softBlue") // Key Color
     static let softBlueDarker = Color("softBlueDarker")
     static let veryLightBlue = Color("veryLightBlue")
+    static let greyWhite = Color("greyWhite")
     
     // MARK: - Emoji colors
     static let angerColor = Color("angerColor")

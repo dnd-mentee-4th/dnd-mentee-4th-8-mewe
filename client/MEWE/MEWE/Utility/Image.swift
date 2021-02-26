@@ -24,6 +24,7 @@ extension Image {
     static let network = Image(systemName: "network")
     static let map = Image(systemName: "map")
     static let RecordEmoji_nextBtn = Image("RecordEmoji_nextBtn")
+    static let xmark = Image(systemName: "xmark")
 }
 
 protocol ImageModifier {
