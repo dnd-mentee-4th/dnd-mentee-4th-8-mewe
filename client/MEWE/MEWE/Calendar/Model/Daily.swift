@@ -6,22 +6,23 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Daily {
     let date: Date
-    let emojiString: String
+    let emojiImage: Image
     let title: String
     let address: String
-    let isFriend: Bool
+    let isSharedOn: Bool
     let totalReaction: String
 
 }
 
 extension Daily {
     static var daily = Daily(date: Date(),
-                             emojiString: "emoji_joy",
+                             emojiImage: Image.emoji_joy,
                              title: "기다리던 여행 날",
                              address: "00 캠핑장",
-                             isFriend: false,
+                             isSharedOn: true,
                              totalReaction: "29")
 }
