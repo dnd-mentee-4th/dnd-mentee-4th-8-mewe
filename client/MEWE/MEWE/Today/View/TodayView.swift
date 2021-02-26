@@ -26,6 +26,8 @@ struct TodayView: View {
                     }
                     .isDetailLink(false)
                     
+
+                    
                     Spacer(minLength: 0)
                 }
                 .padding()

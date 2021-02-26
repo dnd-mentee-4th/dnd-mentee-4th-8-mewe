@@ -9,7 +9,17 @@ import SwiftUI
 
 struct FriendView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedBottomNavigationView(destination: CategoryView(), isRoot: false, isLast: true, height: 100) {
+            Text("친구 목록")
+        }
+        .edgesIgnoringSafeArea(.top)
+
+        List{
+            Text("밥풀\ngigl@naver.com").multilineTextAlignment(.leading).padding()
+            Text("chloe\nunichloe22@naver.com").multilineTextAlignment(.leading).padding()
+            Text("madilyn\nhimadilyn@naver.com").multilineTextAlignment(.leading).padding()
+            Text("lena\nlenaLEe@naver.com").multilineTextAlignment(.leading).padding()
+        }
     }
 }
 
