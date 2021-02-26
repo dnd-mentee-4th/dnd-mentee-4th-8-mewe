@@ -33,6 +33,8 @@
 	<true/>
 	<key>UILaunchScreen</key>
 	<dict>
+		<key>UIColorName</key>
+		<string>ImageBG</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 		<key>UIImageName</key>
