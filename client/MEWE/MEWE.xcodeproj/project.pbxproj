@@ -33,7 +33,6 @@
 		6A27573925CB048700D8A573 /* MonthlyChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27571625CAE47500D8A573 /* MonthlyChartViewModel.swift */; };
 		6A27573E25CB0A6C00D8A573 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27573D25CB0A6C00D8A573 /* NoticeView.swift */; };
 		6A7B308B25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B308A25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift */; };
-		6A7B309625D3A07C00AC17C6 /* MonthlyAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B309525D3A07C00AC17C6 /* MonthlyAnalysisView.swift */; };
 		6A7B309A25D3A3DB00AC17C6 /* MonthlyAnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B309925D3A3DB00AC17C6 /* MonthlyAnalysisViewModel.swift */; };
 		6A7B30A425D3A4E200AC17C6 /* EmotionAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B30A325D3A4E200AC17C6 /* EmotionAnalysis.swift */; };
 		6A8DA1CC25B943860027AEAE /* MEWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1CB25B943860027AEAE /* MEWEApp.swift */; };
@@ -44,6 +43,7 @@
 		6A8DA1D825B943860027AEAE /* MEWE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1D625B943860027AEAE /* MEWE.xcdatamodeld */; };
 		6A8DA1E325B943870027AEAE /* MEWETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1E225B943870027AEAE /* MEWETests.swift */; };
 		6A8DA1EE25B943870027AEAE /* MEWEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */; };
+		6A8E9B8225E949E900350523 /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E9B8125E949E900350523 /* Trend.swift */; };
 		6A9D338125E54A75000A3E8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D338025E54A75000A3E8D /* Color.swift */; };
 		6A9D338525E54A8E000A3E8D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D338425E54A8E000A3E8D /* Image.swift */; };
 		6AA56B6225E63615001F6819 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA56B6125E63615001F6819 /* MapView.swift */; };
@@ -121,7 +121,6 @@
 		6A27573D25CB0A6C00D8A573 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		6A341C6925CFCCE3007FD27A /* HelpBubble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HelpBubble.xcodeproj; path = HelpBubble/HelpBubble.xcodeproj; sourceTree = "<group>"; };
 		6A7B308A25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyRepresentativeEmojiView.swift; sourceTree = "<group>"; };
-		6A7B309525D3A07C00AC17C6 /* MonthlyAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyAnalysisView.swift; sourceTree = "<group>"; };
 		6A7B309925D3A3DB00AC17C6 /* MonthlyAnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyAnalysisViewModel.swift; sourceTree = "<group>"; };
 		6A7B30A325D3A4E200AC17C6 /* EmotionAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAnalysis.swift; sourceTree = "<group>"; };
 		6A8DA1C825B943860027AEAE /* MEWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +137,7 @@
 		6A8DA1E925B943870027AEAE /* MEWEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MEWEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8DA1ED25B943870027AEAE /* MEWEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEWEUITests.swift; sourceTree = "<group>"; };
 		6A8DA1EF25B943870027AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8E9B8125E949E900350523 /* Trend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
 		6A9D338025E54A75000A3E8D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		6A9D338425E54A8E000A3E8D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6AA56B6125E63615001F6819 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -366,7 +366,6 @@
 				6A2756F525CABFD900D8A573 /* MonthlyChartView.swift */,
 				6A27573D25CB0A6C00D8A573 /* NoticeView.swift */,
 				6A7B308A25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift */,
-				6A7B309525D3A07C00AC17C6 /* MonthlyAnalysisView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				6A7B30A325D3A4E200AC17C6 /* EmotionAnalysis.swift */,
+				6A8E9B8125E949E900350523 /* Trend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -696,7 +696,6 @@
 			files = (
 				6AC1933F25E4165B00C8BBA3 /* CalendarSheetView.swift in Sources */,
 				6A9D338525E54A8E000A3E8D /* Image.swift in Sources */,
-				6A7B309625D3A07C00AC17C6 /* MonthlyAnalysisView.swift in Sources */,
 				5C8DDB5C25BC11980093580B /* CircleView.swift in Sources */,
 				5C7537A425E406540025687E /* RecordEmojiViewModel.swift in Sources */,
 				5C7537A925E40FCE0025687E /* RecordEmojiCell.swift in Sources */,
@@ -713,9 +712,10 @@
 				5C8DDB5725BC10FA0093580B /* SelectEmoji.swift in Sources */,
 				6A7B308B25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift in Sources */,
 				5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */,
+				6A8E9B8225E949E900350523 /* Trend.swift in Sources */,
 				5C7537F125E51F020025687E /* CircleViewModel.swift in Sources */,
 				5C75378925DBCF0D0025687E /* TabsView.swift in Sources */,
-				5C93B31525C014300067A723 /* CalendarView.swift in Sources */,
+				5C93B31525C014300067A723 /* EmojiCalendarView.swift in Sources */,
 				6AA56B6825E63730001F6819 /* MapViewModel.swift in Sources */,
 				5C93B31A25C0143A0067A723 /* UserProfileView.swift in Sources */,
 				6AC1933525E407F000C8BBA3 /* SearchBar.swift in Sources */,

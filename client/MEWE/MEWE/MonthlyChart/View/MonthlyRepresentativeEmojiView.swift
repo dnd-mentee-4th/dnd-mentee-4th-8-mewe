@@ -8,22 +8,30 @@
 import SwiftUI
 
 struct MonthlyRepresentativeEmojiView: View {
+    
+    @ObservedObject var viewModel = MonthlyAnalysisViewModel()
+    
     var body: some View {
         HStack {
-            Text("이달의 대표 감정")
-            Button(action: {}){
-                   VStack{
-                    Text("행복")
-                        .setupFont(size: 20, weight: .bold)
-                    Text("+4%")
-                        .setupFont(size: 15, weight: .light, foregroundColor: .white)
-                   }
-                   .padding(40)
-                   .background(Color.orange)
-                   .font(.headline)
-                   .mask(Circle())
-               }
-               .buttonStyle(PlainButtonStyle())
+            Image.emoji_proud
+            VStack(spacing: 10) {
+                Text("뿌듯")
+                    .setupFont(size: 20, weight: .bold)
+                HStack{
+                    trendView(viewModel.analysisData.trend)
+                    Text("\(viewModel.analysisData.changes)%")
+                        .setupFont(size: 18, weight: .light, foregroundColor: .gray)
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private func trendView(_ trend: Trend) -> some View {
+        switch trend {
+        case .uptrend: Text(" ➕")
+        case .downtrend: Text(" ➖")
+        case .maintain: Text("-")
         }
     }
 }
