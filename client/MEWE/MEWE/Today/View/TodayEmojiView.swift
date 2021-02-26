@@ -8,42 +8,104 @@
 import SwiftUI
 import SpriteKit
 
+//enum EmojiNames: String, Codable {
+//    case emoji_ = "emoji_anger"
+//    case 2 = "emoji_concern"
+//    case emoji_ease = "emoji_ease"
+//    case emoji_flustration = "emoji_flustration"
+//    case emoji_happiness = "emoji_happiness"
+//    case emoji_heart = "emoji_heart"
+//    case emoji_joy = "emoji_joy"
+//    case emoji_proud = "emoji_proud"
+//    case emoji_sadness = "emoji_sadness"
+//    case emoji_tiredness = "emoji_tiredness"
+//}
+struct SpriteKitContainer: UIViewRepresentable {
+    
+    typealias UIViewType = SKView
+    
+    var skScene: SKScene!
+    
+    init(scene: SKScene) {
+        skScene = scene
+        self.skScene.size = CGSize(width: 311, height: 372)
+        self.skScene.scaleMode = .fill
+        self.skScene.backgroundColor = .white
+
+    }
+    
+    func makeUIView(context: Context) -> SKView {
+        let view = SKView()
+        
+        return view
+    }
+    
+    func updateUIView(_ view: SKView, context: Context) {
+        view.presentScene(context.coordinator.scene)
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        let coordinator = Coordinator()
+        coordinator.scene = self.skScene
+        return coordinator
+    }
+    
+    class Coordinator: NSObject {
+        var scene: SKScene?
+    }
+    
+}
 class EmojiScene: SKScene{
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {return}
-        let location = touch.location(in: self)
-        let emojiImages = UIImage(named: "RecordEmoji_nextBtn")
-        let texture = SKTexture(image: emojiImages!)
-        let circle = SKSpriteNode(imageNamed: "RecordEmoji_nextBtn")
-        circle.position = location
-        circle.physicsBody = SKPhysicsBody(circleOfRadius: 15)
+    func makeCircle(screenWidth: CGFloat, screenHeight: CGFloat) {
+        
+        let x = CGFloat.random(in: 0...screenWidth - 50)
+        let emojiImg = UIImage(named: "emoji_anger")
+        
+        let texture = SKTexture(image:emojiImg!)
+        let circle = SKSpriteNode(texture: texture)
+        
+        circle.position = CGPoint(x: x, y: screenHeight)
+        circle.physicsBody = SKPhysicsBody(circleOfRadius: 25)
+        circle.size = CGSize(width: 50, height: 50)
         addChild(circle)
     }
+   
 }
 
 struct TodayEmojiView: View {
     @State var isSharedOn = true
-    var scene: SKScene{
-        let scene = EmojiScene()
-        scene.size = CGSize(width: 311, height: 372)
-        scene.scaleMode = .fill
-        scene.backgroundColor = .white
-        return scene
+//    var scene: EmojiScene{
+//        let scene = EmojiScene()
+//        scene.size = CGSize(width: 311, height: 372)
+//        scene.scaleMode = .fill
+//        scene.backgroundColor = .white
+//        return scene
+//    }
+    private var scene: EmojiScene
+    init(_ scene: EmojiScene = EmojiScene()) {
+        self.scene = scene
     }
     var body: some View {
         VStack(){
             Toggle(isOn: $isSharedOn){
             }
             .padding()
-            SpriteView(scene: scene)
+            SpriteKitContainer(scene: scene)
                 .frame(width: 311, height: 372)
                 .shadow(color: .gray, radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
                 .foregroundColor(Color.white)
-            
+//            SpriteView(scene: scene)
+//                .frame(width: 311, height: 372)
+//                .shadow(color: .gray, radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
+//                .foregroundColor(Color.white)
+            Button(action: {
+                scene.makeCircle(screenWidth: 311, screenHeight: 372)
+            }, label: {
+                Text("담기 완료")
+            })
         }
         .padding()
     }

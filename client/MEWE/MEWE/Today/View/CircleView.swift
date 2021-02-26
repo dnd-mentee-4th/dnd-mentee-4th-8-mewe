@@ -7,6 +7,7 @@
 
 import SwiftUI
 var vm = CircleViewModel()
+var emojiStrings = ["emoji_anger","emoji_concern", "emoji_ease", "emoji_flustration", "emoji_happiness", "emoji_heart", "emoji_joy", "emoji_proud", "emoji_sadness", "emoji_tiredness"]
 struct CircleView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){

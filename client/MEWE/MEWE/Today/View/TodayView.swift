@@ -12,7 +12,7 @@ import PartialSheet
 struct TodayView: View {
     
     @EnvironmentObject var partialSheetManager : PartialSheetManager
-
+    var circles = CircleView()
     var body: some View {
         NavigationView {
             VStack {
@@ -48,7 +48,7 @@ struct TodayView: View {
                 } //: H
                 .padding(.horizontal, 16)
                 
-                SelectEmoji()
+                circles
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .addPartialSheet(style: getPartialSheetStyle())
