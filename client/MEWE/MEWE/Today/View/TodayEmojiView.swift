@@ -74,6 +74,7 @@ struct TodayEmojiView: View {
         VStack(){
             Toggle(isOn: $isSharedOn){
             }
+            .toggleStyle(MyToggleStyle())
             .padding()
             SpriteKitContainer(scene: scene)
                 .frame(width: 311, height: 372)

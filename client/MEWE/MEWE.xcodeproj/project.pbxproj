@@ -18,6 +18,7 @@
 		5C7538A425E97E380025687E /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7538A325E97E380025687E /* Emojis.swift */; };
 		5C7538A925E9828B0025687E /* EmojiCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7538A825E9828B0025687E /* EmojiCalendarWeekView.swift */; };
 		5C7538AD25E983EB0025687E /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7538AC25E983EB0025687E /* Daily.swift */; };
+		5C7538B125E9A1A30025687E /* ToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7538B025E9A1A20025687E /* ToggleStyle.swift */; };
 		5C8DDB4625BC03830093580B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4525BC03830093580B /* TodayView.swift */; };
 		5C8DDB4C25BC041D0093580B /* RecordEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */; };
 		5C8DDB7225BC16610093580B /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8DDB7125BC16610093580B /* Emoji.swift */; };
@@ -108,6 +109,7 @@
 		5C7538A325E97E380025687E /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		5C7538A825E9828B0025687E /* EmojiCalendarWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCalendarWeekView.swift; sourceTree = "<group>"; };
 		5C7538AC25E983EB0025687E /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
+		5C7538B025E9A1A20025687E /* ToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyle.swift; sourceTree = "<group>"; };
 		5C8DDB4525BC03830093580B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		5C8DDB4B25BC041D0093580B /* RecordEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEmojiView.swift; sourceTree = "<group>"; };
 		5C8DDB7125BC16610093580B /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7537F025E51F020025687E /* CircleViewModel.swift */,
+				5C7538B025E9A1A20025687E /* ToggleStyle.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				6A7B308B25D39E1800AC17C6 /* MonthlyRepresentativeEmojiView.swift in Sources */,
 				5C8DDB8325BC20E00093580B /* CategoryView.swift in Sources */,
 				6A8E9B8225E949E900350523 /* Trend.swift in Sources */,
+				5C7538B125E9A1A30025687E /* ToggleStyle.swift in Sources */,
 				5C7537F125E51F020025687E /* CircleViewModel.swift in Sources */,
 				5C75378925DBCF0D0025687E /* TabsView.swift in Sources */,
 				5C93B31525C014300067A723 /* EmojiCalendarView.swift in Sources */,

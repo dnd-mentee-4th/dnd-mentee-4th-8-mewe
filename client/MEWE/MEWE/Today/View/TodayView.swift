@@ -20,7 +20,7 @@ struct TodayView: View {
                     NavigationLink(
                         destination: CategoryView()
                     ){
-                        Image(systemName: "line.horizontal.3.decrease")
+                        Image("TodayCategoryBtn")
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
                     }
