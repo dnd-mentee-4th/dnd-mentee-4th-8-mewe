@@ -78,7 +78,8 @@ struct TodayEmojiView: View {
             .padding()
             SpriteKitContainer(scene: scene)
                 .frame(width: 311, height: 372)
-                .shadow(color: .gray, radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
+                .cornerRadius(25)
+                .shadow(color: .gray, radius: 10, x: 0.0, y: 8)
                 .foregroundColor(Color.white)
             
             ScrollView(.horizontal, showsIndicators: false){

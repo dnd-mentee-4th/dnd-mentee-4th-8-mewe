@@ -12,6 +12,7 @@ struct RecordEmojiCell: View {
     static let col = 2
     static let row = 5
     let width = (UIScreen.main.bounds.width/2) - 20
+    var isSelected = false
     
     private let action: (() -> Void)?
     
@@ -41,4 +42,5 @@ struct RecordEmojiCell: View {
         .contentShape(Circle())
         
     }
+    
 }

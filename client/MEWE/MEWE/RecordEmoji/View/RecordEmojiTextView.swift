@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct RecordEmojiTextView: View {
     @Environment(\.presentationMode) private var presentationMode
+    @EnvironmentObject private var manager: PartialSheetManager
+
     @State var txt = ""
     let color: Color
     let cornerRadius: CGFloat
@@ -61,18 +64,39 @@ struct RecordEmojiTextView: View {
                 DispatchQueue.main.async {
                     presentationMode.wrappedValue.dismiss()
                 }
-            })
+            }, trailing: traillingNavBtn())
         .navigationBarBackButtonHidden(true)
         
         .padding()
     }
-}
-
-struct RecordEmojiTextView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            RecordEmojiTextView()
-            RecordEmojiTextView()
+    
+    private func traillingNavBtn() -> some View {
+        return TrailingNavViewForDone {
+            closePartialSheet()
         }
     }
+    
+    /// Close PartialSheet
+    private func closePartialSheet() {
+        DispatchQueue.main.async {
+            withAnimation {
+                manager.closePartialSheet()
+            }
+        }
+    }
+    
+}
+struct TrailingNavViewForDone: View {
+    private let action: (() -> Void)?
+    init(action: (() -> Void)? = nil) {
+        self.action = action
+    }
+    var body: some View {
+        Button(action: {
+            action?()
+        }, label: {
+            Text("완료")
+        })
+    }
+
 }

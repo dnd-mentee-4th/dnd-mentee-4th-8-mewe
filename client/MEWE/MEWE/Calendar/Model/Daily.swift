@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 struct Daily {
-    let date: Date
-    let emojiImage: Image
-    let title: String
-    let address: String
-    let isSharedOn: Bool
-    let totalReaction: String
+    var date: Date
+    var emojiImage: Image
+    var title: String
+    var address: String
+    var isSharedOn: Bool
+    var totalReaction: String
 
 }
 

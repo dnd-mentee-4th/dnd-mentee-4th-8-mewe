@@ -21,7 +21,7 @@ struct MyToggleStyle: ToggleStyle {
                         .foregroundColor(.white)
                         .padding(.all, 3)
                         .overlay(
-                            Image(systemName: configuration.isOn ? "lock" : "lock.open")
+                            Image(systemName: configuration.isOn ? "lock.open" : "lock")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .font(Font.title.weight(.black))
