@@ -38,9 +38,7 @@ struct RecordEmojiView: View {
                             LazyVGrid(columns: columns) {
                                 let numOfEmojis = RecordEmojiCell.col * RecordEmojiCell.row
                                 ForEach(0..<numOfEmojis, id: \.self) { index in
-                                    RecordEmojiCell {
-                                        print(index)
-                                    }
+                                    RecordEmojiCell(index: index)
                                 }
                             } //: V
                         } //: S

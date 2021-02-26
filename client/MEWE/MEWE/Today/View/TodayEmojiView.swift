@@ -7,19 +7,8 @@
 
 import SwiftUI
 import SpriteKit
+var vm = CircleViewModel()
 
-//enum EmojiNames: String, Codable {
-//    case emoji_ = "emoji_anger"
-//    case 2 = "emoji_concern"
-//    case emoji_ease = "emoji_ease"
-//    case emoji_flustration = "emoji_flustration"
-//    case emoji_happiness = "emoji_happiness"
-//    case emoji_heart = "emoji_heart"
-//    case emoji_joy = "emoji_joy"
-//    case emoji_proud = "emoji_proud"
-//    case emoji_sadness = "emoji_sadness"
-//    case emoji_tiredness = "emoji_tiredness"
-//}
 struct SpriteKitContainer: UIViewRepresentable {
     
     typealias UIViewType = SKView
@@ -31,7 +20,7 @@ struct SpriteKitContainer: UIViewRepresentable {
         self.skScene.size = CGSize(width: 311, height: 372)
         self.skScene.scaleMode = .fill
         self.skScene.backgroundColor = .white
-
+        
     }
     
     func makeUIView(context: Context) -> SKView {
@@ -59,10 +48,10 @@ class EmojiScene: SKScene{
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
     }
-    func makeCircle(screenWidth: CGFloat, screenHeight: CGFloat) {
+    func makeCircle(screenWidth: CGFloat, screenHeight: CGFloat, index: Int) {
         
         let x = CGFloat.random(in: 0...screenWidth - 50)
-        let emojiImg = UIImage(named: "emoji_anger")
+        let emojiImg = UIImage(named: emojiStrings[index])
         
         let texture = SKTexture(image:emojiImg!)
         let circle = SKSpriteNode(texture: texture)
@@ -72,18 +61,11 @@ class EmojiScene: SKScene{
         circle.size = CGSize(width: 50, height: 50)
         addChild(circle)
     }
-   
+    
 }
 
 struct TodayEmojiView: View {
     @State var isSharedOn = true
-//    var scene: EmojiScene{
-//        let scene = EmojiScene()
-//        scene.size = CGSize(width: 311, height: 372)
-//        scene.scaleMode = .fill
-//        scene.backgroundColor = .white
-//        return scene
-//    }
     private var scene: EmojiScene
     init(_ scene: EmojiScene = EmojiScene()) {
         self.scene = scene
@@ -97,15 +79,28 @@ struct TodayEmojiView: View {
                 .frame(width: 311, height: 372)
                 .shadow(color: .gray, radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
                 .foregroundColor(Color.white)
-//            SpriteView(scene: scene)
-//                .frame(width: 311, height: 372)
-//                .shadow(color: .gray, radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
-//                .foregroundColor(Color.white)
-            Button(action: {
-                scene.makeCircle(screenWidth: 311, screenHeight: 372)
-            }, label: {
-                Text("담기 완료")
-            })
+            
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing: 10){
+                    ForEach(0..<10)  { index in
+                        Button(action: {
+                            if !(vm.selectedSubEmojis.contains(index)) {
+                                scene.makeCircle(screenWidth: 311, screenHeight: 372, index: index)
+                                vm.choose(selected: index)
+                            }
+                            
+                        }){
+                            Image(emojiStrings[index])
+                                .resizable()
+                                .frame(width: 54.8, height: 54.8)
+                                .clipShape(Circle())
+                        }
+                        .shadow(radius: 5)
+                        .foregroundColor(Color.white)
+                        .padding(.trailing)
+                    }
+                }.padding()
+            }.frame(height:100)
         }
         .padding()
     }

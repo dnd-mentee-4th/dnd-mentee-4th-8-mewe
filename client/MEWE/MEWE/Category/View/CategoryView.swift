@@ -15,7 +15,7 @@ struct CategoryView: View {
                 naviLink(UserProfileView(), "나의 정보")
                 naviLink(FriendView(), "친구 목록")
                 naviLink(EmptyView(), "감정 방명록")
-                naviLink(EmptyView(), "월말 정산")
+                naviLink(MonthlyChartView(), "월말 정산")
                 Toggle(isOn: $isAlarmOn, label: {
                     VStack(alignment: .leading){
                         Text("알람 설정")

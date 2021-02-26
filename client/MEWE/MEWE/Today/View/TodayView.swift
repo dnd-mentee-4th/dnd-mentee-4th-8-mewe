@@ -12,7 +12,7 @@ import PartialSheet
 struct TodayView: View {
     
     @EnvironmentObject var partialSheetManager : PartialSheetManager
-    var circles = CircleView()
+
     var body: some View {
         NavigationView {
             VStack {
@@ -32,23 +32,17 @@ struct TodayView: View {
                 
                 Text(dateForTodayView(date: Date()))
                 TodayEmojiView()
-                
-                HStack {
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        showPartialSheet()
+                Button(action: {
+                    showPartialSheet()
 
-                    }) {
-                        Text("담기 완료!")
-                            .modifier(AddDoneBtnStyling())
-                    } //: B
-                    
-                } //: H
+                }) {
+                    Text("담기 완료!")
+                        .modifier(AddDoneBtnStyling())
+                } //: B
+               
                 .padding(.horizontal, 16)
                 
-                circles
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .addPartialSheet(style: getPartialSheetStyle())
@@ -85,7 +79,7 @@ struct TodayView: View {
             content
                 .padding(8)
                 .foregroundColor(.white)
-                .background(Color.blue)
+                .background(Color.softBlue)
                 .cornerRadius(40)
                 .font(Font.system(size: 12))
         }

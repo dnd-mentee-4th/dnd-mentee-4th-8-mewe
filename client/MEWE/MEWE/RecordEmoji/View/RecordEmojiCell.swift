@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct RecordEmojiCell: View {
+    var index:Int
     static let col = 2
     static let row = 5
     let width = (UIScreen.main.bounds.width/2) - 20
     
     private let action: (() -> Void)?
     
-    init(action: (() -> Void)? = nil) {
+    init(action: (() -> Void)? = nil, index:Int) {
         self.action = action
+        self.index = index
     }
     
     var body: some View {
@@ -23,20 +25,20 @@ struct RecordEmojiCell: View {
         Button(action: {
             action?()
         }, label: {
-            Circle()
-                .fill(Color.white)
-                .frame(width: 54.8, height: 54.8)
-                .shadow(radius: 5)
-                .foregroundColor(Color.white)
-                .padding(30)
+            VStack {
+                Image(emojiStrings[index])
+                    .resizable()
+                    .frame(width: 54.8, height: 54.8)
+                    .clipShape(Circle())
+                Text(emojiDetails[index])
+                    .font(.subheadline)
+                    .colorMultiply(.gray)
+                    
+            }
+            .padding(30)
+            
         })
         .contentShape(Circle())
         
-    }
-}
-
-struct RecordEmojiCell_Previews: PreviewProvider {
-    static var previews: some View {
-        RecordEmojiCell()
     }
 }
