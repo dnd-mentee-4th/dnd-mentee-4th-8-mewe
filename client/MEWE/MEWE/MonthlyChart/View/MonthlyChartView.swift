@@ -11,6 +11,7 @@ import SwiftUICharts
 struct MonthlyChartView: View {
     
     @ObservedObject var viewModel = MonthlyChartViewModel()
+    @State var showingNoticeView = true
     
     var body: some View {
         GeometryReader { geometry in
