@@ -24,7 +24,7 @@ struct RecordEmojiWhereView: View {
                     Text("감정 지도 바로가기")
                         .foregroundColor(.white)
                         .background(RoundedRectangle(cornerRadius: 50)
-                                        .fill(Color.blue)
+                                        .fill(Color.softBlue)
                                         .frame(width: 343, height: 66, alignment: .center))
                         .padding()
                 }

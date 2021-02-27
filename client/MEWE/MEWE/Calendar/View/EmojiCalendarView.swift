@@ -10,6 +10,8 @@ import FSCalendar
 
 class EmojiCalendar: UIViewController, FSCalendarDelegate{
     var calendar = FSCalendar()
+    var todayDate = Date()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +22,10 @@ class EmojiCalendar: UIViewController, FSCalendarDelegate{
         calendar.appearance.weekdayTextColor = .black
         calendar.appearance.caseOptions = FSCalendarCaseOptions.weekdayUsesSingleUpperCase
         calendar.appearance.headerMinimumDissolvedAlpha = 0.0
+        calendar.appearance.todayColor = UIColor(Color.easeColor)
         calendar.backgroundColor = UIColor.white.withAlphaComponent(0)
-        calendar.today = nil
+        calendar.appearance.selectionColor = UIColor(Color.softBlue)
+        calendar.scope = .week
 //        calendar.appearance.eventDefaultColor = .gray
 //        calendar.appearance.eventSelectionColor = .gray
 
@@ -37,17 +41,20 @@ class EmojiCalendar: UIViewController, FSCalendarDelegate{
 extension EmojiCalendar {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         calendar.scope = .week
+        
     }
-    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        calendar.scope = .month
-    }
-
     
 }
 
 struct CalendarView: View {
     var calendarController = EmojiCalendarController()
-    //var backStyle = backButtonStyle()
+    var todayContentView = EmojiCalendarWeekView(
+        today: Date(), daily: Daily(date: Date(),
+        emojiImage: Image.emoji_joy,
+        title: "기다리던 여행 날",
+        address: "00 캠핑장",
+        isSharedOn: true,
+        totalReaction: "29"))
     var body: some View {
         VStack{
             HStack {
@@ -59,17 +66,20 @@ struct CalendarView: View {
                 }.padding()
                 .buttonStyle(backButtonStyle(isWeekMode: calendarController.isWeekMode()))
                 Spacer()
+
             }
             calendarController
+                .frame(width: 362, height: 300, alignment: .center)
+            todayContentView
             
-            //Details
-            Text("details..")
+            Spacer()
 
         }
     }
 }
 struct backButtonStyle: PrimitiveButtonStyle {
     var isWeekMode: Bool
+    
     func makeBody(configuration: Configuration) -> some View {
         MyButton(configuration: configuration)
     }
@@ -109,5 +119,6 @@ struct EmojiCalendarController: UIViewControllerRepresentable {
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarView()
+        
     }
 }

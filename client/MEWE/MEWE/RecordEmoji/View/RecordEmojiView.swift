@@ -21,6 +21,7 @@ struct RecordEmojiView: View {
     
     @State var selection: Bool? = false
     @State var selectedItems: Int!
+    @State var newDaily = Daily(date: Date(), emojiImage: Image.emoji_joy, title: "", address: "", isSharedOn: true, totalReaction: "")
     
     var body: some View {
         NavigationView {
@@ -38,9 +39,10 @@ struct RecordEmojiView: View {
                             LazyVGrid(columns: columns) {
                                 let numOfEmojis = RecordEmojiCell.col * RecordEmojiCell.row
                                 ForEach(0..<numOfEmojis, id: \.self) { index in
-                                    RecordEmojiCell {
-                                        print(index)
-                                    }
+                                    var cell = RecordEmojiCell(action: {
+                                        newDaily.emojiImage = Image(emojiStrings[index])
+                                    }, index: index)
+                                    cell
                                 }
                             } //: V
                         } //: S

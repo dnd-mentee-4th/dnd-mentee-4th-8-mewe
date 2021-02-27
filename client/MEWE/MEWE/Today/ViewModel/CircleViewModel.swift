@@ -14,6 +14,5 @@ class CircleViewModel {
     func choose(selected: Int) {
         selectedSubEmojis.append(selected)
         selectedSubEmojis = Array(Set(selectedSubEmojis))
-        print("current selected emojis: ", selectedSubEmojis)
     }
 }

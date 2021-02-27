@@ -10,24 +10,24 @@ import PartialSheet
 let sheetManager: PartialSheetManager = PartialSheetManager()
 
 struct TabsView: View {
-    @State private var selection = 1
+    @State private var selection = 2
     var body: some View {
         TabView(selection: $selection) {
             CalendarView()
                 .tabItem {
-                    Image(systemName: "1.square.fill")
+                    Image("Tabs1")
                     Text("감정 달력")
                 }
             TodayView()
                 .environmentObject(sheetManager)
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image("Tabs2")
                     Text("감정 기록")
                 }
             EmojiMapView()
                 .environmentObject(sheetManager)
                 .tabItem {
-                    Image(systemName: "3.square.fill")
+                    Image("Tabs3")
                     Text("감정 지도")
                 }
         }

@@ -20,11 +20,13 @@ struct TodayView: View {
                     NavigationLink(
                         destination: CategoryView()
                     ){
-                        Image(systemName: "line.horizontal.3.decrease")
+                        Image("TodayCategoryBtn")
                             .font(.system(size: 25, weight:.heavy))
                             .foregroundColor(.black)
                     }
                     .isDetailLink(false)
+                    
+
                     
                     Spacer(minLength: 0)
                 }
@@ -32,23 +34,17 @@ struct TodayView: View {
                 
                 Text(dateForTodayView(date: Date()))
                 TodayEmojiView()
-                
-                HStack {
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        showPartialSheet()
+                Button(action: {
+                    showPartialSheet()
 
-                    }) {
-                        Text("담기 완료!")
-                            .modifier(AddDoneBtnStyling())
-                    } //: B
-                    
-                } //: H
+                }) {
+                    Text("담기 완료!")
+                        .modifier(AddDoneBtnStyling())
+                } //: B
+               
                 .padding(.horizontal, 16)
                 
-                SelectEmoji()
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .addPartialSheet(style: getPartialSheetStyle())
@@ -85,7 +81,7 @@ struct TodayView: View {
             content
                 .padding(8)
                 .foregroundColor(.white)
-                .background(Color.blue)
+                .background(Color.softBlue)
                 .cornerRadius(40)
                 .font(Font.system(size: 12))
         }
